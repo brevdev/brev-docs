@@ -1,0 +1,67 @@
+site_name: Brev Dev Docs
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css
+  - stylesheets/style.css
+  - stylesheets/highlight.css
+  - stylesheets/custom.scss
+copyright: brev.dev 2021 -- All rights reserved
+extra:
+  copyright: Brev 2021
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/brevdev
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/NVDyv7TUgJ
+    - icon: fontawesome/brands/github
+      link: https://github.com/brevdev
+
+nav:
+  # - Home: index.md
+  - Tutorials:
+      - Home: tutorials/index.md
+      - Tutorial 1: tutorials/to-do-app-backend-tutorial.md
+  - How-Tos:
+      - Home: howto/index.md
+      - How To Add Query Params: howto/how-to-add-query-params.md
+      - How To Add JSON Body: howto/how-to-add-json-body.md
+      - How To Access Stdout: howto/read-print-statements-outside-of-brev-cli-console.md
+      - How To Add Environment Variables: howto/add-environment-variables.md
+      - How To Create an Endpoint: howto/how-to-create-endpoint.md
+      - How To Accept Different HTTP Methods: howto/how-to-accept-different-http-methods.md
+      - How To Store Data: howto/how-to-store-data.md
+      - How To Save a File: howto/save-a-file.md
+      - How To Pass Request Files: howto/how-to-pass-request-files-to-endpoints.md
+      - How To Return Custom Responses: howto/return-a-custom-response.md
+  - Reference:
+      - Home: reference/index.md
+      - Brev DB (storage_context): reference/built-in-database-storage-context.md
+      - Shared Code: reference/shared-code.md
+      - Environment Variables: reference/env-secrets-manager.md
+      - Out-of-the-Box Functionality: reference/out-of-the-box-sms-file-upload-roboflow.md
+      - Runtime and Environment: reference/runtime-and-environment.md
+      - Limitations: reference/limitations.md
+  - Discussions:
+      - Home: discussions/index.md
+      - Brev DB Best Practices: discussions/best-practices-for-brev-database.md
+      - Our 2 Principles: discussions/our-two-principles.md
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - python
+    - bash
+  logo: icon.png
+  favicon: brev.png
+  custom_dir: overrides
+  # palette:
+  #   primary: deep orange
+  #   accent: cyan
+  font:
+    text: Red Hat Display
+    code: Space Mono
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - attr_list

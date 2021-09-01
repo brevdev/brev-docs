@@ -1,0 +1,129 @@
+<style>
+  .hourly-banner {
+    z-index: 999999;
+    /* position: fixed; */
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #dff0d8;
+    width: 100%;
+    font-size: large;
+    box-sizing: border-box;
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation: hourly-banner-slide-in 0.8s ease forwards;
+    animation: hourly-banner-slide-in 0.8s ease forwards;
+  }
+
+  .hourly-banner.banner-open {
+    background: #dff0d8;
+  }
+  .hourly-banner.banner-closingSoon {
+    background: #fcf8e3;
+  }
+  .hourly-banner.banner-close {
+    background: #f2dede;
+  }
+
+  .hourly-banner-content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 40px;
+    box-sizing: border-box;
+  }
+
+  .hourly-banner-text {
+    margin: 0 20px 0 0;
+    color: #3c763d;
+  }
+  .hourly-banner-text.banner-open {
+    color: #3c763d;
+  }
+  .hourly-banner-text.banner-closingSoon {
+    color: #8a6d3b;
+  }
+  .hourly-banner-text.banner-close {
+    color: #a94442;
+  }
+
+  .hourly-banner-close {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  .hourly-banner-close:before,
+  .hourly-banner-close:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background: #ffffff;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+  }
+
+  .hourly-banner-close:before {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .hourly-banner-close:after {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  @-webkit-keyframes hourly-banner-slide-in {
+    0% {
+      -webkit-transform: translateY(-150%);
+      transform: translateY(-150%);
+    }
+
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes hourly-banner-slide-in {
+    0% {
+      -webkit-transform: translateY(-150%);
+      transform: translateY(-150%);
+    }
+
+    100% {
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+</style>
+
+<!-- <div class="hourly-banner banner-open">
+  <div class="hourly-banner-content">
+    <div class="hourly-banner-text banner-open" usedbyfluent="true">
+      The
+      <a style="text-decoration: underline" href="https://brev.dev">
+        next version</a
+      >
+      is here! This won't be getting further support.
+    </div>
+  </div>
+</div> -->
+
+{% extends "base.html" %}
