@@ -1,7 +1,17 @@
-# How To #4
-## How To Add Environment Variables
+# How To #1
+## Find my localhost
 
-You can add environment variables to any Brev endpoint. It's a good practice to avoid using secret keys and other system level variables directly in the code. 
+If you're inside your Brev workspace and are running something on localhost, you can access it using your workspace URL.
+
+From the dashboard, copy your url:
+
+![Screenshot](media/variables.png)
+
+Prefix the port number with a "-" and that's your localhost + port.
+
+For example:
+
+If your url is `jelly-brevdev.brev.sh` and you're running on `localhost:3000`, your localhost url is `3000-jelly-brevdev.brev.sh`.
 
 
 
