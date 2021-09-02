@@ -22,16 +22,9 @@ nav:
       - Tutorial 1: tutorials/to-do-app-backend-tutorial.md
   - How-Tos:
       - Home: howto/index.md
-      - How To Add Query Params: howto/how-to-add-query-params.md
-      - How To Add JSON Body: howto/how-to-add-json-body.md
-      - How To Access Stdout: howto/read-print-statements-outside-of-brev-cli-console.md
-      - How To Add Environment Variables: howto/add-environment-variables.md
-      - How To Create an Endpoint: howto/how-to-create-endpoint.md
-      - How To Accept Different HTTP Methods: howto/how-to-accept-different-http-methods.md
-      - How To Store Data: howto/how-to-store-data.md
-      - How To Save a File: howto/save-a-file.md
-      - How To Pass Request Files: howto/how-to-pass-request-files-to-endpoints.md
-      - How To Return Custom Responses: howto/return-a-custom-response.md
+      - Find Your Localhost: howto/find-my-localhost.md
+      - Make a Port Public: howto/make-port-public.md
+      - Common Installations: howto/common-installations.md
   - Reference:
       - Home: reference/index.md
       - Brev DB (storage_context): reference/built-in-database-storage-context.md
