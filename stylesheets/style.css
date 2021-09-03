@@ -1,0 +1,26 @@
+body {
+  background-color: #ffffff;
+}
+/* 
+.bg-primary {
+    color: red;
+    background-color: red;
+} */
+
+:root {
+  --md-primary-fg-color: #14acb6;
+  --md-primary-fg-color--light: #31bbc5;
+  --md-primary-fg-color--dark: #212529;
+  --md-accent-fg-color: #31bbc5;
+  --md-accent-bg-color: #31bbc5;
+  --md-accent-bg-color--light: #31bbc5;
+}
+
+/* .md-footer-copyright {
+    visibility: hidden !important;
+    height: 0px;
+}
+.md-footer-copyright__highlight {
+    visibility: visible !important;
+    display: block !important;
+} */
