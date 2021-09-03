@@ -1,31 +1,26 @@
 # Reference
 
-Brev is built on top of FastApi/ (v0.61.0) Starlette and supports much of its API. To dig deeper in request/response, validation and documenation it might be helpful to checkout their docs.
+Brev creates your powerful computer in the cloud for development. Everything has moved to the cloud except your development, which doesn't make a ton of sense since development has the most to benefit from the cloud:
 
-Brev lets you create projects. In each project, you'll find:
+- unlimited ram and CPU
+- instant upgrades to the latest and greatest hardware
+- no more wasting time with machine configurations
+- get a public url for anything you're working on: APIs, front ends, etc.
 
-- Endpoints: Code that responds to http requests.
-- Shared Code: Code that can be shared by any endpoint in a project
-- Packages: Installable 3rd party packages from PyPi that can be used in endpoints or shared code
-- Variables: A secure way to use and manage secrets, keys, passwords and is also a good way to manage environment variables or global constants in your code.
-- Storage: A simple key value database. It can be thought of as a persistent dictionary accross requests as its api closely mirrors python's native dict type. It's a great way to build a proof of concept without needing to hook up a database.
+Brev is not a streamed computer-- it's a service that configures your powerful cloud computer for you to build anything with. You are the superuser on your Brev machine.
 
-####Below are full references for Brev components.
+## The .brev directory
+Brev solves configurations with the .brev directory.
 
-### [Brev DB (storage_context)](built-in-database-storage-context.md)
-The built-in Brev DB, imported as `storage_context`
+There are two types of configurations:
 
-### [Shared Code](shared-code.md)
-Write code accessible by all of your endpoints.
+1. Personal dev configs, such as Zsh vs Bash, light mode vs dark mode, keybindings, and certain extensions
+2. Repo configs, such as node version, python version, any specific installation/set up/onboarding instructions.
 
-### [Environment Variables](env-secrets-manager.md)
-Use Brev's built-in encrypted secrets/environment variable manager rather than putting your secrets in plain text.
+## Personal .brev
+For the first type of configs, go to your Account and update the Workspace Settings Repo. You'll need a git repo that just contains a .brev/setup.sh file. Fork this repo as a good place to start.
 
-### [Out-of-the-Box Functionality](out-of-the-box-sms-file-upload-roboflow.md)
-Send SMS text messages, save upload files, and run computer vision inference without any additional setup!
+![Screenshot](media/account.png)
 
-### [Runtime and Environment](runtime-and-environment.md)
-Learn more about your Brev server's runtime and environment.
-
-### [Limitations](limitations.md)
-Understand what limitations exist within a Brev deploy and applicable workarounds.
+## Project .brev
+Automatically configure your project for any new contributor by commiting a .brev/setup.sh to the code repository. Brev will automatically execute the script for every new workspace created. Brev automatically creates the .brev/setup.sh if it doesn't exist.
