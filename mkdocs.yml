@@ -27,10 +27,10 @@ nav:
       - Common Installations: howto/common-installations.md
   - Reference:
       - Home: reference/index.md
-  - Discussions:
-      - Home: discussions/index.md
-      - Brev DB Best Practices: discussions/best-practices-for-brev-database.md
-      - Our 2 Principles: discussions/our-two-principles.md
+  # - Discussions:
+  #     - Home: discussions/index.md
+  #     - Brev DB Best Practices: discussions/best-practices-for-brev-database.md
+  #     - Our 2 Principles: discussions/our-two-principles.md
 theme:
   name: material
   highlightjs: true
