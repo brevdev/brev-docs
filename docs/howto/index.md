@@ -6,5 +6,5 @@ Looking for your localhost url?
 ### [Make a Port Public](make-port-public.md)
 Remove auth from your localhost
 
-### [Common Installations](common-installations.md)
-Cheatsheet for common installations, such as golang, node, python, etc.
+### [Environment Variables in Setup Script](env-vars-dot-brev.md)
+How to add environment variables in your setup script
