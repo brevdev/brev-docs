@@ -9,7 +9,7 @@ Brev creates your powerful computer in the cloud for development. Everything has
 
 Brev is not a streamed computer-- it's a service that configures your powerful cloud computer for you to build anything with. You are the superuser on your Brev machine.
 
-## The .brev directory
+## [The .brev directory](dot-brev-setup-script.md)
 Brev solves configurations with the .brev directory.
 
 There are two types of configurations:

@@ -19,7 +19,7 @@ nav:
   # - Home: index.md
   - Tutorials:
       - Home: tutorials/index.md
-      - Tutorial 1: tutorials/to-do-app-backend-tutorial.md
+      - Tutorial 1: tutorials/automatically-set-up.md
   - How-Tos:
       - Home: howto/index.md
       - Find Your Localhost: howto/find-my-localhost.md
@@ -27,6 +27,7 @@ nav:
       - Common Installations: howto/common-installations.md
   - Reference:
       - Home: reference/index.md
+      - Setup Scripts (.brev): reference/dot-brev-setup-script.md
   # - Discussions:
   #     - Home: discussions/index.md
   #     - Brev DB Best Practices: discussions/best-practices-for-brev-database.md
@@ -44,7 +45,7 @@ theme:
   #   primary: deep orange
   #   accent: cyan
   font:
-    text: Red Hat Display
+    text: Red Hat Text
     code: Space Mono
 
 markdown_extensions:
