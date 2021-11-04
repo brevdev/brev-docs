@@ -25,6 +25,7 @@ nav:
       - Find Your Localhost: howto/find-my-localhost.md
       - Make a Port Public: howto/make-port-public.md
       - Environment Variables: howto/env-vars-dot-brev.md
+      - Troubleshoot Reset: howto/troubleshoot-reset.md
   - Reference:
       - Home: reference/index.md
       - Setup Scripts (.brev): reference/dot-brev-setup-script.md
