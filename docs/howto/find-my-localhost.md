@@ -1,4 +1,4 @@
-# How To #1
+# How To
 ## Find my localhost
 
 If you're inside your Brev workspace and are running something on localhost, you can access it using your workspace URL.

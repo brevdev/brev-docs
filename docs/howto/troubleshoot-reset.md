@@ -1,4 +1,4 @@
-# How To #3
+# How To 
 ## Reset Your Machine
 
 If you [setup your .brev directory](/howto/automatically-set-up/), you can easily dispose of machines if they get into a bad state. Your fresh machine will come configured, so you can freely reset when you encounter problems.

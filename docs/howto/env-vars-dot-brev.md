@@ -1,4 +1,4 @@
-# How To #3
+# How To
 ## Environment Variables in the Setup Script
 
 [The .brev scripts](/reference/dot-brev-setup-script) executes once a Brev machine is provisioned, but are not preserved. You must instead add environment variables to a `~/.bashrc` or `~/.zshrc` file that gets sourced. 

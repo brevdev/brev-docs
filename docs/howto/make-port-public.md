@@ -1,4 +1,4 @@
-# How To #2
+# How To
 ## Make a port public
 
 If you're accessing your localhost url such as `3000-jelly-brevdev.brev.sh`, you'll notice it requires your password.
