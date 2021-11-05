@@ -1,4 +1,4 @@
-# Tutorial #1
+# How To
 ## Automatically set up Brev machines with .brev setup script.
 Specify software and dependencies that are required for your project. Creating a .brev setup script for each Brev project will standardize dependencies, packages and tools across all developers contributing to the same project (ex. Node v14, Yarn v1.22)
 
