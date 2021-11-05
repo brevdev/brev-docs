@@ -15,6 +15,10 @@ Careful not to place user settings in here (like VSCode extensions or settings) 
 
 A log file with output from the script. It is located at `./.brev/logs/setup.log`. We strongly encourage echo-ing statements into this file when installing new software to know where errors might be located.
 
+You can look to [setup your .brev directory](/howto/automatically-set-up/) for a cheatsheet of common installations. 
+
+***Note: Brev only hands over the machine once the setup is complete. This means running an open ended process like starting a server with `npm run start` in your .brev setup script will appear to be infinitely loading. We're working on a fix, but for now, please do not run open ended processes in this script.***
+
 ## .brev/ports.yaml
 You can specify which ports you want publicly accessible. By default, any connection to your project is password protected. Although this is secure, it prevents testing routes, connecting different services (like a backend and frontend), and publicly sharing your project.
 
