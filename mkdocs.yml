@@ -31,6 +31,7 @@ nav:
   - Reference:
       - Home: reference/index.md
       - Setup Scripts (.brev): reference/dot-brev-setup-script.md
+      - CLI Docs: reference/brev-cli.md
   # - Discussions:
   #     - Home: discussions/index.md
   #     - Brev DB Best Practices: discussions/best-practices-for-brev-database.md

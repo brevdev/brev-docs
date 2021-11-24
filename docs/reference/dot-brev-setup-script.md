@@ -2,7 +2,8 @@
 
 ## The .brev directory
 
-Creating a .brev setup script for each Brev project will standardize dependencies, packages and tools across all developers contributing to the same project (ex. Node v14, Yarn v1.22). By default, Brev will create a /.brev/setup.sh script in your workspace. If you commit this to your repo, it will get executed for every new Brev machine. 
+Creating a .brev setup script for each Brev project will standardize dependencies, packages and tools across all developers contributing to the same project (ex. Node v14, Yarn v1.22).
+ **Brev will create a /.brev/setup.sh script in your workspace. Commit this to your repo to have it executed for every new Brev machine**
 
 The setup scripts run from the project directory, so `/home/brev/<PROJECT_FOLDER_NAME>`
 

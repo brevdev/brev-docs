@@ -31,4 +31,4 @@ brev port-forward brevdocs --port 3000:3000
 
 Not sure what your workspace is called? Try `brev ls` to print orgs in your active org. You can view orgs with `brev ls orgs` and change active orgs with `brev set <org_name>`.
 
-Reach out to us in the [Discord](https://discord.gg/NVDyv7TUgJ) for help. Build something great 🤙
+View the full [CLI docs here](/reference/brev-cli), and reach out to us in the [Discord](https://discord.gg/NVDyv7TUgJ) for help! We're here for anything you need. Build something great 🤙
