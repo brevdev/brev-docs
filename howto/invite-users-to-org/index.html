@@ -141,7 +141,7 @@
     
     
       
-        <title>Connect Via Emacs - Brev Dev Docs</title>
+        <title>Invite Users to Your Organization - Brev Dev Docs</title>
       
     
     
@@ -195,7 +195,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#connect-to-a-brev-workspace-using-emacs" class="md-skip">
+        <a href="#invite-users-to-your-organization" class="md-skip">
           Skip to content
         </a>
       
@@ -227,7 +227,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Connect Via Emacs
+              Invite Users to Your Organization
             
           </span>
         </div>
@@ -450,20 +450,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../invite-users-to-org/" class="md-nav__link">
-        Invite Users to Your Organization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -476,9 +462,23 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Connect Via Emacs
+        Invite Users to Your Organization
       </a>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../connect-via-emacs/" class="md-nav__link">
+        Connect Via Emacs
+      </a>
     </li>
   
 
@@ -625,34 +625,14 @@
               
                 
 
-<h1 id="connect-to-a-brev-workspace-using-emacs">Connect to a Brev workspace using Emacs</h1>
-<p>Make sure you have the <a href="/">Brev CLI installed</a></p>
-<p>In emacs execute <code>M-x dired RET</code> and enter the directory</p>
-<div class="highlight"><pre><span></span><code>/ssh:&lt;workspace-name&gt;:/home/brev/workspace/vue-coffee
-</code></pre></div>
-<hr />
-<p>You'll need to have a running workspace. If you don't have one yet:</p>
-<p>Deploy a new workspace with <a href="/reference/brev-cli/#start">brev start</a>
-<div class="highlight"><pre><span></span><code>$ brev start https://github.com/just-fine/vue-coffee
-Workspace is starting. This can take up to <span class="m">2</span> minutes the first time.
-
-⣻  workspace is deploying
-Your workspace is ready!
-
-SSH into your machine:
-    ssh just-fine/vue-coffee
-</code></pre></div></p>
-<p>Wait until your workspace is done deploying and then, in a seperate terminal, run <a href="/reference/brev-cli/#up">brev up</a>: </p>
-<div class="highlight"><pre><span></span><code>$ brev up
-Setting up client...
-Resolving workspaces...
-Running up...
-Editing ssh config, backed up at path /home/f/.brev/config.bak.ee755c95-c3c4-4f35-9305-f5c88cf86207
-
-ssh just-fine/vue-coffee
-
-Forwarding from <span class="m">127</span>.0.0.1:2229 -&gt; <span class="m">22</span>
-</code></pre></div>
+<h1 id="invite-users-to-your-organization">Invite Users to Your Organization</h1>
+<p>You can invite users to your organization from the org settings page in the <a href="https://console.brev.dev" target="_blank">Brev dashboard</a></p>
+<p>From the Organization dropdown at the top, click on the gear ⚙️ for your organization.
+<img alt="Screenshot" src="../media/invite1.png" /></p>
+<p>Click on the <code>Invite a Collaborator</code> button
+<img alt="Screenshot" src="../media/invite2.png" /></p>
+<p>Type in a valid username in, select the permission scope, and click <code>Add User</code>.
+<img alt="Screenshot" src="../media/invite3.png" /></p>
 
               
             </article>
@@ -666,7 +646,7 @@ Forwarding from <span class="m">127</span>.0.0.1:2229 -&gt; <span class="m">22</
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../invite-users-to-org/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Invite Users to Your Organization" rel="prev">
+        <a href="../create-org/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Create an Organization" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -675,20 +655,20 @@ Forwarding from <span class="m">127</span>.0.0.1:2229 -&gt; <span class="m">22</
               <span class="md-footer__direction">
                 Previous
               </span>
-              Invite Users to Your Organization
+              Create an Organization
             </div>
           </div>
         </a>
       
       
         
-        <a href="../connect-via-vscode/" class="md-footer__link md-footer__link--next" aria-label="Next: Connect Via VSCode" rel="next">
+        <a href="../connect-via-emacs/" class="md-footer__link md-footer__link--next" aria-label="Next: Connect Via Emacs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Connect Via VSCode
+              Connect Via Emacs
             </div>
           </div>
           <div class="md-footer__button md-icon">
