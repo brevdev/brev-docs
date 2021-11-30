@@ -141,7 +141,7 @@
     
     
       
-        <title>Make a Port Public - Brev Dev Docs</title>
+        <title>Connect Via Emacs - Brev Dev Docs</title>
       
     
     
@@ -195,7 +195,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to" class="md-skip">
+        <a href="#connect-to-a-brev-workspace-using-emacs" class="md-skip">
           Skip to content
         </a>
       
@@ -227,7 +227,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Make a Port Public
+              Connect Via Emacs
             
           </span>
         </div>
@@ -380,52 +380,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Make a Port Public
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../make-port-public/" class="md-nav__link">
         Make a Port Public
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#make-a-port-public" class="md-nav__link">
-    Make a port public
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -477,11 +436,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../connect-via-emacs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Connect Via Emacs
       </a>
+      
     </li>
   
 
@@ -617,21 +586,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#make-a-port-public" class="md-nav__link">
-    Make a port public
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -643,13 +597,34 @@
               
                 
 
-<h1 id="how-to">How To</h1>
-<h2 id="make-a-port-public">Make a port public</h2>
-<p>If you're accessing your localhost url such as <code>3000-jelly-brevdev.brev.sh</code>, you'll notice it requires your password.</p>
-<p>If you want to remove auth to use Postman, consume the endpoint in your frontend, or just show your mom what you built, you can do so in the <code>.brev/ports.yaml</code> added to every Brev workspace.</p>
-<p><img alt="Screenshot" src="../media/ports.png" /></p>
-<p>Add the port you wish to expose in the list and that's it!</p>
-<p><strong>Note:</strong> the version field is optional. It could be useful if you choose to commit this to your project repo.</p>
+<h1 id="connect-to-a-brev-workspace-using-emacs">Connect to a Brev workspace using Emacs</h1>
+<p>Make sure you have the <a href="/">brev-cli installed</a></p>
+<p>In emacs execute <code>M-x dired RET</code> and enter the directory</p>
+<div class="highlight"><pre><span></span><code>/ssh:&lt;workspace-name&gt;:/home/brev/workspace/vue-coffee
+</code></pre></div>
+<hr />
+<p>You'll need to have a running workspace. If you don't have one yet:</p>
+<p>Deploy a new workspace with <a href="/reference/brev-cli/#start">brev start</a>
+<div class="highlight"><pre><span></span><code>$ brev start https://github.com/just-fine/vue-coffee
+Workspace is starting. This can take up to <span class="m">2</span> minutes the first time.
+
+⣻  workspace is deploying
+Your workspace is ready!
+
+SSH into your machine:
+    ssh just-fine/vue-coffee
+</code></pre></div></p>
+<p>Wait until your workspace is done deploying and then, in a seperate terminal, run <a href="/reference/brev-cli/#up">brev up</a>: </p>
+<div class="highlight"><pre><span></span><code>$ brev up
+Setting up client...
+Resolving workspaces...
+Running up...
+Editing ssh config, backed up at path /home/f/.brev/config.bak.ee755c95-c3c4-4f35-9305-f5c88cf86207
+
+ssh just-fine/vue-coffee
+
+Forwarding from <span class="m">127</span>.0.0.1:2229 -&gt; <span class="m">22</span>
+</code></pre></div>
 
               
             </article>
@@ -663,7 +638,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../find-my-localhost/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Find Your Localhost" rel="prev">
+        <a href="../secret-variables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Encrypted Secrets" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -672,20 +647,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Find Your Localhost
+              Encrypted Secrets
             </div>
           </div>
         </a>
       
       
         
-        <a href="../env-vars-dot-brev/" class="md-footer__link md-footer__link--next" aria-label="Next: Environment Variables" rel="next">
+        <a href="../connect-via-vscode/" class="md-footer__link md-footer__link--next" aria-label="Next: Connect Via VSCode" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Environment Variables
+              Connect Via VSCode
             </div>
           </div>
           <div class="md-footer__button md-icon">

@@ -141,7 +141,7 @@
     
     
       
-        <title>Make a Port Public - Brev Dev Docs</title>
+        <title>Connect Via Jetbrains - Brev Dev Docs</title>
       
     
     
@@ -195,7 +195,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to" class="md-skip">
+        <a href="#connect-to-a-brev-workspace-using-jetbrains" class="md-skip">
           Skip to content
         </a>
       
@@ -227,7 +227,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Make a Port Public
+              Connect Via Jetbrains
             
           </span>
         </div>
@@ -380,52 +380,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Make a Port Public
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../make-port-public/" class="md-nav__link">
         Make a Port Public
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#make-a-port-public" class="md-nav__link">
-    Make a port public
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -505,11 +464,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../connect-via-jetbrains/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Connect Via Jetbrains
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Connect Via Jetbrains
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#do-it-manually" class="md-nav__link">
+    Do It Manually
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -624,8 +624,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#make-a-port-public" class="md-nav__link">
-    Make a port public
+  <a href="#do-it-manually" class="md-nav__link">
+    Do It Manually
   </a>
   
 </li>
@@ -643,13 +643,52 @@
               
                 
 
-<h1 id="how-to">How To</h1>
-<h2 id="make-a-port-public">Make a port public</h2>
-<p>If you're accessing your localhost url such as <code>3000-jelly-brevdev.brev.sh</code>, you'll notice it requires your password.</p>
-<p>If you want to remove auth to use Postman, consume the endpoint in your frontend, or just show your mom what you built, you can do so in the <code>.brev/ports.yaml</code> added to every Brev workspace.</p>
-<p><img alt="Screenshot" src="../media/ports.png" /></p>
-<p>Add the port you wish to expose in the list and that's it!</p>
-<p><strong>Note:</strong> the version field is optional. It could be useful if you choose to commit this to your project repo.</p>
+<h1 id="connect-to-a-brev-workspace-using-jetbrains">Connect to a Brev workspace using JetBrains</h1>
+<p>Make sure you have the <a href="/">brev-cli installed</a></p>
+<hr />
+<p><em>This includes Webstorm, GoLand, IntelliJ IDEA, PyCharm etc.</em></p>
+<p>You will need to open JetBrains Gateway instead of your locally installed JetBrains IDE. It will install the language process server and other heavyweight processes on the remote machine, while exposing the client of the IDE to you.</p>
+<p>We guide you through this process the first time you download the CLI, but a link to manually download the software is here: https://www.jetbrains.com/remote-development/gateway/</p>
+<ol>
+<li>
+<p>Open JetBrains Gateway and select "Connect Via SSH"
+<img alt="Screenshot" src="../media/jetbrains1.png" /></p>
+</li>
+<li>
+<p>Your Brev machines should already be listed for you! Select the correct machine and click "Check Connection and Continue". If you do not see your brev machine, <a href="#do-it-manually">skip to the end</a> of this to manually add ssh connection details 👇
+<img alt="Screenshot" src="../media/jetbrains2.png" /></p>
+</li>
+<li>
+<p>Select the IDE you'd like to use. Enter the project directory. This will always be <code>/home/brev/workspace/&lt;GIT_REPO_OR_PROJECT_NAME&gt;</code>. If you don't know the GIT_REPO_OR_PROJECT_NAME, simply click on the folder icon to find the correct folder. Click Download and Start IDE! That's it!
+<img alt="Screenshot" src="../media/jetbrains3.png" /></p>
+</li>
+</ol>
+<!-- IDE Versions in the dropdown:
+![Screenshot](media/jetbrains4.png) -->
+
+<hr />
+<h3 id="do-it-manually">Do It Manually</h3>
+<p>To manually add SSH connection details:</p>
+<ol>
+<li>
+<p>Select <code>&lt;New Connection&gt;</code> from the Connection dropdown
+<img alt="Screenshot" src="../media/jetbrains5.png" /></p>
+</li>
+<li>
+<p>Enter the following information:</p>
+<ul>
+<li><strong>Username:</strong> brev</li>
+<li><strong>Host:</strong> localhost</li>
+<li><strong>Private Key:</strong> <code>&lt;ROOT&gt;/.brev/brev.pem</code>. <code>ROOT</code> is ~, in Mac this would be <code>/Users/&lt;USERNAME&gt;</code>. You must enter the absolute path, relative paths will not work.</li>
+<li><strong>Save Passphrase:</strong> Unchecked</li>
+<li><strong>Port:</strong> Select the port of the brev project displayed in your terminal after entering brev up. See example below:
+<img alt="Screenshot" src="../media/jetbrains6.png" /></li>
+</ul>
+</li>
+<li>
+<p>Go back to step 3) and continue from there 🙂</p>
+</li>
+</ol>
 
               
             </article>
@@ -663,7 +702,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../find-my-localhost/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Find Your Localhost" rel="prev">
+        <a href="../connect-via-vscode/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Connect Via VSCode" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -672,20 +711,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Find Your Localhost
+              Connect Via VSCode
             </div>
           </div>
         </a>
       
       
         
-        <a href="../env-vars-dot-brev/" class="md-footer__link md-footer__link--next" aria-label="Next: Environment Variables" rel="next">
+        <a href="../../reference/" class="md-footer__link md-footer__link--next" aria-label="Next: Home" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Environment Variables
+              Home
             </div>
           </div>
           <div class="md-footer__button md-icon">
