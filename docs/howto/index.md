@@ -26,3 +26,4 @@ You can reset your Brev machine and get a newly configured one to troubleshoot.
 ### Organization Management
 
 * [Create an org](create-org.md)
+* [Invite a user to your org](invite-users-to-org.md)
