@@ -1,6 +1,6 @@
 # Connect to a Brev workspace using VSCode
 
-Make sure you have the [brev-cli installed](/)
+Make sure you have the [Brev CLI installed](/)
 
 ---
 
