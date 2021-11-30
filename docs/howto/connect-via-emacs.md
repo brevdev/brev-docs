@@ -13,7 +13,7 @@ In emacs execute `M-x dired RET` and enter the directory
 
 You'll need to have a running workspace. If you don't have one yet:
 
-Deploy a new workspace with
+Deploy a new workspace with [brev start](/reference/brev-cli/#start)
 ```shell
 $ brev start https://github.com/just-fine/vue-coffee
 Workspace is starting. This can take up to 2 minutes the first time.
@@ -26,7 +26,7 @@ SSH into your machine:
 
 ```
 
-Wait until your workspace is done deploying and then, in a seperate terminal, run `brev up`: 
+Wait until your workspace is done deploying and then, in a seperate terminal, run [brev up](/reference/brev-cli/#up): 
 
 ```shell
 $ brev up
