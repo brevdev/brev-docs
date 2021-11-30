@@ -28,6 +28,7 @@ nav:
       - Environment Variables: howto/env-vars-dot-brev.md
       - Troubleshoot Reset: howto/troubleshoot-reset.md
       - Encrypted Secrets: howto/secret-variables.md
+      - Connect Via Emacs: howto/connect-via-emacs.md
   - Reference:
       - Home: reference/index.md
       - Setup Scripts (.brev): reference/dot-brev-setup-script.md

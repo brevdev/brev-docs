@@ -14,3 +14,8 @@ How to add environment variables in your setup script
 
 ### [Reset Your Machine to Troubleshoot](troubleshoot-reset.md)
 You can reset your Brev machine and get a newly configured one to troubleshoot.
+
+
+### Connect to a workspace
+
+Connect to a workspace using [emacs](connect-via-emacs.md)
