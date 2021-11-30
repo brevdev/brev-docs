@@ -1,9 +1,19 @@
 # Connect to a Brev workspace using Emacs
 
-make sure you have [installed brev-cli](https://docs.brev.dev)
+Make sure you have the [brev-cli installed](https://docs.brev.dev)
 
-deploy a new workspace with
+In emacs execute `M-x dired RET` and enter the directory
 
+```
+/ssh:<workspace-name>:/home/brev/workspace/vue-coffee
+```
+
+
+---
+
+You'll need to have a running workspace. If you don't have one yet:
+
+Deploy a new workspace with
 ```shell
 $ brev start https://github.com/just-fine/vue-coffee
 Workspace is starting. This can take up to 2 minutes the first time.
@@ -16,7 +26,7 @@ SSH into your machine:
 
 ```
 
-wait until your workspace is done deploying and then run in a seperate terminal
+Wait until your workspace is done deploying and then, in a seperate terminal, run `brev up`: 
 
 ```shell
 $ brev up
@@ -29,11 +39,4 @@ ssh just-fine/vue-coffee
 
 Forwarding from 127.0.0.1:2229 -> 22
 
-```
-
-
-In emacs execute `M-x dired RET` and enter the directory
-
-```
-/ssh:<workspace-name>:/home/brev/workspace/vue-coffee
 ```
