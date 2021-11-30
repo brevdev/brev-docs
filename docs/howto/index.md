@@ -18,4 +18,8 @@ You can reset your Brev machine and get a newly configured one to troubleshoot.
 
 ### Connect to a workspace
 
-Connect to a workspace using [emacs](connect-via-emacs.md)
+* with [emacs](connect-via-emacs.md)
+
+* with [Jetbrains IDEs](connect-via-jetbrains.md)
+
+* with [VS Code](connect-via-vscode.md)

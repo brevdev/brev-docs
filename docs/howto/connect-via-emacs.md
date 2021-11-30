@@ -1,6 +1,6 @@
 # Connect to a Brev workspace using Emacs
 
-Make sure you have the [brev-cli installed](https://docs.brev.dev)
+Make sure you have the [brev-cli installed](/)
 
 In emacs execute `M-x dired RET` and enter the directory
 
