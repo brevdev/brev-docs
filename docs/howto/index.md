@@ -1,6 +1,6 @@
 # How To
 
-### [Common .Brev Installations](find-my-localhost.md)
+### [Common .Brev Installations](automatically-set-up.md)
 Cheatsheet for common installations for your .brev setup script
 
 ### [Find your localhost](find-my-localhost.md)
