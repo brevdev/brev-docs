@@ -403,6 +403,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#install-rust" class="md-nav__link">
+    Install Rust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-homebrew" class="md-nav__link">
     Install Homebrew
   </a>
@@ -412,6 +419,13 @@
           <li class="md-nav__item">
   <a href="#node" class="md-nav__link">
     Node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-npm-packages-without-sudo" class="md-nav__link">
+    Install NPM Packages Without Sudo
   </a>
   
 </li>
@@ -715,6 +729,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#install-rust" class="md-nav__link">
+    Install Rust
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#install-homebrew" class="md-nav__link">
     Install Homebrew
   </a>
@@ -724,6 +745,13 @@
           <li class="md-nav__item">
   <a href="#node" class="md-nav__link">
     Node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-npm-packages-without-sudo" class="md-nav__link">
+    Install NPM Packages Without Sudo
   </a>
   
 </li>
@@ -779,6 +807,11 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg <span class="p">|</span> sudo 
 sudo apt update
 sudo apt install -y yarn
 </code></pre></div>
+<h3 id="install-rust">Install Rust</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">#### RUST #####</span>
+<span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;##### Rust #####&quot;</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span><span class="o">)</span>
+curl https://sh.rustup.rs -sSf <span class="p">|</span> sh -s -- -y
+</code></pre></div>
 <h3 id="install-homebrew">Install Homebrew</h3>
 <div class="highlight"><pre><span></span><code><span class="c1">##### Homebrew #####</span>
 <span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;##### Homebrew #####&quot;</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">&quot;&quot;</span><span class="p">;</span><span class="o">)</span>
@@ -793,6 +826,21 @@ curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh <s
 sudo apt install ca-certificates
 curl -fsSL https://deb.nodesource.com/setup_14.x <span class="p">|</span> sudo -E bash -
 sudo apt-get install -y nodejs
+</code></pre></div>
+<h3 id="install-npm-packages-without-sudo">Install NPM Packages Without Sudo</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># install npm packages globally without sudo</span>
+<span class="c1"># modified from https://stackoverflow.com/questions/18088372/how-to-npm-install-global-not-as-root</span>
+mkdir <span class="s2">&quot;</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.npm-packages&quot;</span>
+<span class="nb">printf</span> <span class="s2">&quot;prefix=</span><span class="si">${</span><span class="nv">HOME</span><span class="si">}</span><span class="s2">/.npm-packages&quot;</span> &gt;&gt; <span class="nv">$HOME</span>/.npmrc
+cat <span class="s">&lt;&lt;EOF | tee -a ~/.bashrc | tee -a ~/.zshrc</span>
+<span class="s">NPM_PACKAGES=&quot;\${HOME}/.npm-packages&quot;</span>
+<span class="s">NODE_PATH=&quot;\${NPM_PACKAGES}/lib/node_modules:\${NODE_PATH}&quot;</span>
+<span class="s">PATH=&quot;\${NPM_PACKAGES}/bin:\${PATH}&quot;</span>
+<span class="s"># Unset manpath so we can inherit from /etc/manpath via the `manpath`</span>
+<span class="s"># command</span>
+<span class="s">unset MANPATH # delete if you already modified MANPATH elsewhere in your config</span>
+<span class="s">MANPATH=&quot;\${NPM_PACKAGES}/share/man:\$(manpath)&quot;</span>
+<span class="s">EOF</span>
 </code></pre></div>
 <h3 id="python-pip-and-poetry">Python, Pip, and Poetry</h3>
 <div class="highlight"><pre><span></span><code><span class="c1">##### Python + Pip + Poetry #####</span>
