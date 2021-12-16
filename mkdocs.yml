@@ -8,12 +8,12 @@ copyright: brev.dev 2021 -- All rights reserved
 extra:
   copyright: Brev 2021
   social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/brevdev
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/brevdev
     - icon: fontawesome/brands/discord
       link: https://discord.gg/NVDyv7TUgJ
-    - icon: fontawesome/brands/github
-      link: https://github.com/brevdev
 
 nav:
   # - Home: index.md
@@ -48,7 +48,7 @@ theme:
     - python
     - bash
   logo: icon.png
-  favicon: brev.png
+  favicon: favicon.png
   custom_dir: overrides
   # palette:
   #   primary: deep orange

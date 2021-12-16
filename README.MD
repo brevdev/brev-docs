@@ -1,4 +1,4 @@
-# Hello fellow Brev Developer :)
+# Hello fellow Brev dev :)
 
 These are the brev docs. For any new page, please think hard about where it best fits. There are 4 options.
 
@@ -19,7 +19,6 @@ Reference:
 Discussions:
     - Understanding oriented.
     - Shed light on how and why.
-
 
 ## TO ADD A PAGE, FOLLOW THIS CHECKLIST
 [ ] Create the md file for your page in whichever section folder it best fits.
