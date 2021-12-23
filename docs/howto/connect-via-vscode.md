@@ -14,3 +14,13 @@ Open VS Code and use the [Remote - SSH extension](https://marketplace.visualstud
 
 3. Select your workspace, and that's it!
 ![Screenshot](media/vscode3.png)
+
+---
+
+By the way, if you're connecting to a workspace that you've connected to in the past, you can open up directly to the folder:
+
+1. Click on the Remote Explorer icon
+![Screenshot](media/revscode1.png)
+
+2. Click on the folder icon for the workspace you want to connect to
+![Screenshot](media/revscode2.png)
