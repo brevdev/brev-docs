@@ -10,6 +10,8 @@ sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main
 
 2. Run `brev login`. If you don't already have an account, this will create one and prompt you to create an SSH key.
 
+**Your account must be verified to create a workspace. You can verify by putting a credit card on file (we'll never charge you without your permission) or just message us in the discord.**
+
 3. Use the `start` command to create your first workspace. *Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.*
 ```zsh
 brev start <git_url>
