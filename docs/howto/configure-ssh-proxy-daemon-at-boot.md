@@ -6,7 +6,12 @@ Make sure that you have installed the [cli](https://github.com/brevdev/brev-cli/
 
 ### Mac OS
 
-Add the following configuration to <!-- todo what location -->
+Add the following configuration to `~/Library/LaunchAgents/dev.brev.plist`. If
+the directory `~/Library/LaunchAgents/` does not exist, you can create it with
+
+```shell
+$ mkdir -p ~/Library/LaunchAgents/
+```
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -27,6 +32,23 @@ Add the following configuration to <!-- todo what location -->
 
 ```
 
+start the service with:
+
+```shell
+launchtl bootstrap gui/$UID ~/Library/LaunchAgents/dev.brev.plist
+```
+
+check to see that it worked by runnning
+
+```shell
+launchtl list | grep brev.dev
+```
+
+which should show output similar to:
+
+```
+4203    0   dev.brev
+```
 
 ### Linux
 
