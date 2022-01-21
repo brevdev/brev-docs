@@ -204,39 +204,3 @@ Get your ssh keys to add to your git provider.
 brev ssh-key
 ```
 Quick links to add it to [Github](https://github.com/settings/keys) or [Gitlab](https://gitlab.com/-/profile/keys)
-<<<<<<< HEAD
-
-#### login
-Authenticate yourself with
-```zsh
-brev login
-```
-This will create an account if you don't already have one.
-
-#### logout
-Remove your keys and logout
-```zsh
-brev logout
-```
-
-#### refresh
-As a troubleshooting measure, you can force the cache to refresh if you suspect they're stale.
-```zsh
-brev refresh
-```
-
-#### run-tasks
-Run tasks keeps the ssh config up to date, which is necessary to connect your local machine to all of your brev workspaces. Run:
-```zsh
-# the -d flag runs it in the background
-brev run-tasks -d
-```
-
-#### refresh
-If you're noticing some workspaces to be missing, use the Brev refresh command to try forcing a refresh to the ssh config and ensuring the daemon is started:
-
-```zsh
-brev refresh
-```
-=======
->>>>>>> updated docs
