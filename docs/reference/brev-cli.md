@@ -113,13 +113,18 @@ brev ls --org org_name
 ### SSH Commands
 Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.
 
-#### up
-To establish a connection between your local computer and all of the workspaces in your organization, run:
+#### jetbrains
+Jetbrains, unfortunately, doesn't use the standard SSH file, and instead uses a custom XML file. To establish a connection between your local computer and all of the workspaces in your organization, run:
+
 ```zsh
-brev up
+brev jetbrains
 ```
 
-Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev up`. We will likely move this to a background task.
+This command runs a helper proxy for jetbrains products that allows your jetbrains IDEs ssh access. It does *not* update if new workspaces are created or deleted, so please stop the process and re-run it to update it.
+
+Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
+
+
 
 #### port-forward
 You can always access the localhost URL of your workspace via the [public url](/howto/find-my-localhost/), or you can port-forward your remote localhost to a local one.
