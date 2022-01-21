@@ -60,19 +60,16 @@ If you no longer need a machine, and you'd like an action more permanent than [s
 
 `brev delete workspace_name`
 
-#### proxy
-TODO
-
 #### reset
 If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
 
 #### run-tasks
-TODO
+This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run `brev run-tasks`. If you'd like to make this a background process, add a `-d` to the end.
 
 #### start
 Create a new workspace from a git URL or to start a stopped workspace.
 
-Supplying a git url, 
+Supplying a git url,
 ```zsh
 brev start git_url
 ```
@@ -80,14 +77,14 @@ brev start git_url
 
 When viewed from the web dashboard, workspaces within an org become projects, allowing your organization's members to get their own cloned workspace with one click.
 
-If you have a Brev workspace in a stopped state, run 
+If you have a Brev workspace in a stopped state, run
 ```zsh
 brev start workspace_name
 ```
-to start it up again. Note, this might take a minute or two. 
+to start it up again. Note, this might take a minute or two.
 
 #### stop
-If you don't plan on using your Brev workspace, you can temporarily pause it by running 
+If you don't plan on using your Brev workspace, you can temporarily pause it by running
 ```zsh
 brev stop workspace_name
 ```
