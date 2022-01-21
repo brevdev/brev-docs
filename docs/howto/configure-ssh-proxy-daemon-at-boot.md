@@ -1,13 +1,12 @@
 # How To
 
-## configure ssh proxy to start at boot
+## Configure ssh proxy to start at Boot
 
-make sure that you ahve installed the [cli](https://github.com/brevdev/brev-cli/)
-
+Make sure that you have installed the [cli](https://github.com/brevdev/brev-cli/)
 
 ### Mac OS
 
-add the following configuration to <!-- todo what location -->
+Add the following configuration to <!-- todo what location -->
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -31,7 +30,7 @@ add the following configuration to <!-- todo what location -->
 
 ### Linux
 
-add the the following configuration to `/etc/systemd/user/brev.service`
+Add the the following configuration to `/etc/systemd/user/brev.service`
 or `$HOME/.config/systemd/user/brev.service`
 
 ```ini

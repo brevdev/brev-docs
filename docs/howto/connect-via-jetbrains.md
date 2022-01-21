@@ -8,11 +8,11 @@ _This includes Webstorm, GoLand, IntelliJ IDEA, PyCharm etc._
 
 You will need to open JetBrains Gateway instead of your locally installed JetBrains IDE. It will install the language process server and other heavyweight processes on the remote machine, while exposing the client of the IDE to you.
 
-We guide you through this process the first time you download the CLI, but a link to manually download the software is here: https://www.jetbrains.com/remote-development/gateway/
+We guide you through this process the first time you download the CLI, but a link to manually download the software is here: [jetbrains.com/remote-development/gateway](https://www.jetbrains.com/remote-development/gateway/)
 
 1. Run `brev jetbrains` in your terminal.
 
-2. Open JetBrains Gateway and select "Connect Via SSH"
+2. Open JetBrains Gateway and select "Connect Via SSH".
 ![Screenshot](media/jetbrains1.png)
 
 3. Your Brev machines should already be listed for you! Select the correct machine and click "Check Connection and Continue". If you do not see your brev machine, [skip to the end](#do-it-manually) of this to manually add ssh connection details 👇
@@ -20,8 +20,6 @@ We guide you through this process the first time you download the CLI, but a lin
 
 4. Select the IDE you'd like to use. Enter the project directory. This will always be `/home/brev/workspace/<GIT_REPO_OR_PROJECT_NAME>`. If you don't know the GIT_REPO_OR_PROJECT_NAME, simply click on the folder icon to find the correct folder. Click Download and Start IDE! That's it!
 ![Screenshot](media/jetbrains3.png)
-<!-- IDE Versions in the dropdown:
-![Screenshot](media/jetbrains4.png) -->
 
 ---
 
