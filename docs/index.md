@@ -9,13 +9,14 @@ sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main
 ```
 
 2.  Add brev.dev to your path:
-zsh
+
+ZSH
 ```zsh
 # zsh
 export PATH=/opt/brev/bin:$PATH
 echo PATH=/opt/brev/bin:$PATH >> ~/.zshrc
 ```
-bash
+Bash
 ```zsh
 # bash
 export PATH=/opt/brev/bin:$PATH
