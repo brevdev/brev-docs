@@ -13,20 +13,20 @@ sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main
 softwareupdate --install-rosetta
 ```
 
-2.  Add brev.dev to your path:
+2.  Add the `brev` command to your path:
 
-    ZSH
-    ```zsh
-    # zsh
-    export PATH=/opt/brev/bin:$PATH
-    echo PATH=/opt/brev/bin:$PATH >> ~/.zshrc
-    ```
-    Bash
-    ```zsh
-    # bash
-    export PATH=/opt/brev/bin:$PATH
-    echo PATH=/opt/brev/bin:$PATH >> ~/.bashrc
-    ```
+**zsh**
+```zsh
+# zsh
+export PATH=/opt/brev/bin:$PATH
+echo PATH=/opt/brev/bin:$PATH >> ~/.zshrc
+```
+**Bash**
+```zsh
+# bash
+export PATH=/opt/brev/bin:$PATH
+echo PATH=/opt/brev/bin:$PATH >> ~/.bashrc
+```
 
 3. Run `brev login`. If you don't already have an account, this will create one and prompt you to create an SSH key.
 

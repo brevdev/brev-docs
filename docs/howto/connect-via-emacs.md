@@ -26,17 +26,4 @@ SSH into your machine:
 
 ```
 
-Wait until your workspace is done deploying and then, in a seperate terminal, run [brev up](/reference/brev-cli/#up): 
-
-```shell
-$ brev up
-Setting up client...
-Resolving workspaces...
-Running up...
-Editing ssh config, backed up at path /home/f/.brev/config.bak.ee755c95-c3c4-4f35-9305-f5c88cf86207
-
-ssh just-fine/vue-coffee
-
-Forwarding from 127.0.0.1:2229 -> 22
-
-```
+***That's it! 🤙***
