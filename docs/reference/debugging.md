@@ -24,7 +24,13 @@ It is likely that you just deleted the workspace and it is still deleting. Pleas
 
 
 ## Workspace version issue
-If you've used Brev with older version of the CLI, it's likely that your workspaces need to be upgraded. There isn't a command to upgrade the workspaces yet, so in the interim, please delete the workspace and create it again.
+If you've used Brev with older version of the CLI, it's likely that your workspaces need to be upgraded. You might see an error like this:
+
+```zsh
+workspace of version v1.6.8 is not supported with this cli version\n upgrade your workspace or downgrade your cli"
+```
+
+There isn't a command to upgrade the workspaces yet, so in the interim, please delete the workspace and create it again.
 
 ```zsh
 brev delete brev-cli
