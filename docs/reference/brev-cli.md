@@ -55,6 +55,20 @@ Workspace commands, Context commands, SSH commands, and Housekeeping commands.
 
 ### Workspace Commands
 
+#### delete
+If you no longer need a machine, and you'd like an action more permanent than [stop](/reference/brev-cli/#stop), you can delete the workspace.
+
+`brev delete workspace_name`
+
+#### proxy
+TODO
+
+#### reset
+If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
+
+#### run-tasks
+TODO
+
 #### start
 Create a new workspace from a git URL or to start a stopped workspace.
 
@@ -79,22 +93,8 @@ brev stop workspace_name
 ```
 Everything in `/home/workspace` will be saved when it boots up again.
 
-#### reset
-If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
-
-#### delete
-If you no longer need a machine, and you'd like an action more permanent than [stop](/reference/brev-cli/#stop), you can delete the workspace.
-
-`brev delete workspace_name`
-
 ### Context Commands
 Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an `--active-org` flag for scripting purposes.
-
-#### set
-Set the organization context for your commands.
-```zsh
-brev set <org name>
-```
 
 #### ls
 Print a tabular view of your workspaces or orgs
@@ -110,19 +110,14 @@ brev ls
 brev ls --org org_name
 ```
 
-### SSH Commands
-Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.
-
-#### jetbrains
-Jetbrains, unfortunately, doesn't use the standard SSH file, and instead uses a custom XML file. To establish a connection between your local computer and all of the workspaces in your organization, run:
-
+#### set
+Set the organization context for your commands.
 ```zsh
-brev jetbrains
+brev set <org name>
 ```
 
-This command runs a helper proxy for jetbrains products that allows your jetbrains IDEs ssh access. It does *not* update if new workspaces are created or deleted, so please stop the process and re-run it to update it.
-
-Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
+### SSH Commands
+Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.
 
 #### port-forward
 You can always access the localhost URL of your workspace via the [public url](/howto/find-my-localhost/), or you can port-forward your remote localhost to a local one.
@@ -143,6 +138,30 @@ This command runs interactive if the ports flag is left off.
 
 ### Housekeeping Commands
 
+#### jetbrains
+Jetbrains, unfortunately, doesn't use the standard SSH file, and instead uses a custom XML file. To establish a connection between your local computer and all of the workspaces in your organization, run:
+
+```zsh
+brev jetbrains
+```
+
+This command runs a helper proxy for jetbrains products that allows your jetbrains IDEs ssh access. It does *not* update if new workspaces are created or deleted, so please stop the process and re-run it to update it.
+
+Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
+
+#### login
+Authenticate yourself with
+```zsh
+brev login
+```
+This will create an account if you don't already have one.
+
+#### logout
+Remove your keys and logout
+```zsh
+brev logout
+```
+
 #### profile
 ##### Personal Workspace Settings
 If you have personal settings, such as aliases or shortcuts in your `~/.zshrc` or `~/.bash_profile`, you can sync them with Brev.dev to make sure every workspace you create has them.
@@ -151,6 +170,12 @@ Create a git repo with setup script at `~.brev/setup.sh` or fork our example [he
 
 ```zsh
 brev profile --set-personal-config _git_repo_url_
+```
+
+#### refresh
+As a troubleshooting measure, you can force the cache to refresh if you suspect they're stale.
+```zsh
+brev refresh
 ```
 
 #### secret
@@ -179,6 +204,7 @@ Get your ssh keys to add to your git provider.
 brev ssh-key
 ```
 Quick links to add it to [Github](https://github.com/settings/keys) or [Gitlab](https://gitlab.com/-/profile/keys)
+<<<<<<< HEAD
 
 #### login
 Authenticate yourself with
@@ -212,3 +238,5 @@ If you're noticing some workspaces to be missing, use the Brev refresh command t
 ```zsh
 brev refresh
 ```
+=======
+>>>>>>> updated docs
