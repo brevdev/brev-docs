@@ -5,7 +5,7 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
 
 1.  Start by downloading the CLI:
     ```zsh
-    sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`"
+    sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`" && export PATH=/opt/brev/bin:$PATH && brev run-tasks -d
     ```
     **Apple Silicon (M1) Mac?** You'll need to run rosetta first:
     ```zsh
@@ -32,12 +32,7 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
 
     **Your account must be verified to create a workspace. You can verify by putting a credit card on file (we'll never charge you without your permission) or just message us in the [Discord](https://discord.gg/NVDyv7TUgJ).**
 
-5. Run the daemon (this will soon happen automatically)
-    ```zsh
-    brev run-tasks -d 
-    ```
-
-6. Use the `start` command to create your first workspace. *Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.*
+5. Use the `start` command to create your first workspace. *Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.*
 ```zsh
 brev start <git_url>
 ```
