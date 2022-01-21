@@ -124,8 +124,6 @@ This command runs a helper proxy for jetbrains products that allows your jetbrai
 
 Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
 
-
-
 #### port-forward
 You can always access the localhost URL of your workspace via the [public url](/howto/find-my-localhost/), or you can port-forward your remote localhost to a local one.
 
@@ -197,6 +195,20 @@ brev logout
 
 #### refresh
 As a troubleshooting measure, you can force the cache to refresh if you suspect they're stale.
+```zsh
+brev refresh
+```
+
+#### run-tasks
+Run tasks keeps the ssh config up to date, which is necessary to connect your local machine to all of your brev workspaces. Run:
+```zsh
+# the -d flag runs it in the background
+brev run-tasks -d
+```
+
+#### refresh
+If you're noticing some workspaces to be missing, use the Brev refresh command to try forcing a refresh to the ssh config and ensuring the daemon is started:
+
 ```zsh
 brev refresh
 ```
