@@ -61,3 +61,8 @@ h4 {font-size: 1.563rem;}
 h5 {font-size: 1.25rem;}
 
 small, .text_small {font-size: 0.8rem;} */
+
+.md-clipboard{
+  background-color: white;
+  border: 1px solid #e1e1e1;
+}

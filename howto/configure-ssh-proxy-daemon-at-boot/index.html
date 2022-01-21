@@ -151,7 +151,7 @@
     
     
       
-        <title>Environment Variables - Brev Dev Docs</title>
+        <title>Configure SSH Proxy Daemon at Boot - Brev Dev Docs</title>
       
     
     
@@ -236,7 +236,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Environment Variables
+              Configure SSH Proxy Daemon at Boot
             
           </span>
         </div>
@@ -403,52 +403,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Environment Variables
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../env-vars-dot-brev/" class="md-nav__link">
         Environment Variables
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#environment-variables-in-the-setup-script" class="md-nav__link">
-    Environment Variables in the Setup Script
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -514,11 +473,72 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../configure-ssh-proxy-daemon-at-boot/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configure SSH Proxy Daemon at Boot
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Configure SSH Proxy Daemon at Boot
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-ssh-proxy-to-start-at-boot" class="md-nav__link">
+    Configure ssh proxy to start at Boot
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure ssh proxy to start at Boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-os" class="md-nav__link">
+    Mac OS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -689,9 +709,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#environment-variables-in-the-setup-script" class="md-nav__link">
-    Environment Variables in the Setup Script
+  <a href="#configure-ssh-proxy-to-start-at-boot" class="md-nav__link">
+    Configure ssh proxy to start at Boot
   </a>
+  
+    <nav class="md-nav" aria-label="Configure ssh proxy to start at Boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mac-os" class="md-nav__link">
+    Mac OS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -709,30 +749,62 @@
                 
 
 <h1 id="how-to">How To</h1>
-<h2 id="environment-variables-in-the-setup-script">Environment Variables in the Setup Script</h2>
-<p><a href="/reference/dot-brev-setup-script">The .brev scripts</a> executes once a Brev machine is provisioned, but are not preserved. You must instead add environment variables to a <code>~/.bashrc</code> or <code>~/.zshrc</code> file that gets sourced. </p>
-<p>For example, to install python's package manager pip which requires modifying the path, you'll need to first install pip:</p>
-<div class="highlight"><pre><span></span><code>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py
-rm get-pip.py
+<h2 id="configure-ssh-proxy-to-start-at-boot">Configure ssh proxy to start at Boot</h2>
+<p>Make sure that you have installed the <a href="https://github.com/brevdev/brev-cli/">cli</a></p>
+<h3 id="mac-os">Mac OS</h3>
+<p>Add the following configuration to <!-- todo what location --></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+    <span class="nt">&lt;key&gt;</span>Label<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;string&gt;</span>dev.brev<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;array&gt;</span>
+        <span class="nt">&lt;string&gt;</span>/opt/brev/bin/brev<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>run-tasks<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/array&gt;</span>
+    <span class="nt">&lt;key&gt;</span>KeepAlive<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;true/&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
 </code></pre></div>
-<p>You'll need to instead put this new path in your zshrc and bashrc and source both files.
-<div class="highlight"><pre><span></span><code><span class="nb">printf</span> <span class="s2">&quot;\n%s\n&quot;</span> <span class="s2">&quot;export PATH=/home/brev/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span> <span class="p">|</span> tee -a ~/.bashrc <span class="p">|</span> tee -a ~/.zshrc
+<h3 id="linux">Linux</h3>
+<p>Add the the following configuration to <code>/etc/systemd/user/brev.service</code>
+or <code>$HOME/.config/systemd/user/brev.service</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">[Install]</span><span class="w"></span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span><span class="w"></span>
 
-<span class="c1"># Instead of exporting the variable:</span>
-<span class="c1"># export PATH=/home/brev/.local/bin:$PATH </span>
+<span class="k">[Unit]</span><span class="w"></span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Brev SSH Proxy Daemon</span><span class="w"></span>
+<span class="na">After</span><span class="o">=</span><span class="s">systend-user-sessions.service</span><span class="w"></span>
+
+<span class="k">[Service]</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/brev/bin/brev run-tasks</span><span class="w"></span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span><span class="w"></span>
+</code></pre></div>
+<p>enable and start the daemon by running :
+<div class="highlight"><pre><span></span><code>$ systemctl --user <span class="nb">enable</span> brev
+$ systemctl --user start brev
 </code></pre></div></p>
-<p>Here's the full snipped to add to .brev for properly installing pip:</p>
-<div class="highlight"><pre><span></span><code>curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-python3 get-pip.py
-rm get-pip.py
+<p>check status with</p>
+<div class="highlight"><pre><span></span><code>$ systemctl --user status brev
+</code></pre></div>
+<p>and you should see an output similar to:</p>
+<div class="highlight"><pre><span></span><code>● brev.service - Brev SSH Proxy Daemon
+     Loaded: loaded <span class="o">(</span>/etc/xdg/systemd/user/brev.service<span class="p">;</span> disabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+     Active: active <span class="o">(</span>running<span class="o">)</span> since Tue <span class="m">2022</span>-01-18 <span class="m">19</span>:03:49 PST<span class="p">;</span> 3s ago
+   Main PID: <span class="m">264331</span> <span class="o">(</span>brev<span class="o">)</span>
+      Tasks: <span class="m">11</span> <span class="o">(</span>limit: <span class="m">47870</span><span class="o">)</span>
+     Memory: <span class="m">8</span>.8M
+        CPU: 59ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/brev.service
+             └─264331 /opt/brev/bin/brev run-tasks
 
-<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> &gt;&gt; ~/.zshrc
-<span class="nb">echo</span> <span class="s2">&quot;export PATH=/home/brev/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span> &gt;&gt; ~/.zshrc
-<span class="nb">echo</span> <span class="s2">&quot;&quot;</span> &gt;&gt; ~/.bashrc
-<span class="nb">echo</span> <span class="s2">&quot;export PATH=/home/brev/.local/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span> &gt;&gt; ~/.bashrc
-<span class="nb">source</span> ~/.zshrc
-<span class="nb">source</span> ~/.bashrc
+Jan <span class="m">18</span> <span class="m">19</span>:03:49 pop-os systemd<span class="o">[</span><span class="m">4294</span><span class="o">]</span>: Started Brev SSH Proxy Daemon.
+Jan <span class="m">18</span> <span class="m">19</span>:03:51 pop-os brev<span class="o">[</span><span class="m">264331</span><span class="o">]</span>: <span class="m">2022</span>/01/18 <span class="m">19</span>:03:51 creating new ssh config
+Jan <span class="m">18</span> <span class="m">19</span>:03:51 pop-os brev<span class="o">[</span><span class="m">264331</span><span class="o">]</span>: <span class="m">2022</span>/01/18 <span class="m">19</span>:03:51 ensuring has include
 </code></pre></div>
 
               
@@ -747,7 +819,7 @@ rm get-pip.py
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../make-port-public/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Make a Port Public" rel="prev">
+        <a href="../invite-users-to-org/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Invite Users to Your Organization" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -756,20 +828,20 @@ rm get-pip.py
               <span class="md-footer__direction">
                 Previous
               </span>
-              Make a Port Public
+              Invite Users to Your Organization
             </div>
           </div>
         </a>
       
       
         
-        <a href="../troubleshoot-reset/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshoot Reset" rel="next">
+        <a href="../connect-via-emacs/" class="md-footer__link md-footer__link--next" aria-label="Next: Connect Via Emacs" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Troubleshoot Reset
+              Connect Via Emacs
             </div>
           </div>
           <div class="md-footer__button md-icon">
