@@ -7,7 +7,7 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
 ```zsh
 sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`"
 ```
-**Apple Silicon (M1) Mac? You'll need to run rosetta first:**
+**Apple Silicon (M1) Mac?** You'll need to run rosetta first:
 ```zsh
 # for M1 macs only
 softwareupdate --install-rosetta
