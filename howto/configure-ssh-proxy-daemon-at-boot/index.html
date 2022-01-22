@@ -752,7 +752,10 @@
 <h2 id="configure-ssh-proxy-to-start-at-boot">Configure ssh proxy to start at Boot</h2>
 <p>Make sure that you have installed the <a href="https://github.com/brevdev/brev-cli/">cli</a></p>
 <h3 id="mac-os">Mac OS</h3>
-<p>Add the following configuration to <!-- todo what location --></p>
+<p>Add the following configuration to <code>~/Library/LaunchAgents/dev.brev.plist</code>. If
+the directory <code>~/Library/LaunchAgents/</code> does not exist, you can create it with</p>
+<div class="highlight"><pre><span></span><code>$ mkdir -p ~/Library/LaunchAgents/
+</code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
 <span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
@@ -768,6 +771,15 @@
     <span class="nt">&lt;true/&gt;</span>
 <span class="nt">&lt;/dict&gt;</span>
 <span class="nt">&lt;/plist&gt;</span>
+</code></pre></div>
+<p>start the service with:</p>
+<div class="highlight"><pre><span></span><code>launchctl bootstrap gui/<span class="nv">$UID</span> ~/Library/LaunchAgents/dev.brev.plist
+</code></pre></div>
+<p>check to see that it worked by runnning</p>
+<div class="highlight"><pre><span></span><code>launchctl list <span class="p">|</span> grep brev
+</code></pre></div>
+<p>which should show output similar to:</p>
+<div class="highlight"><pre><span></span><code>4203    0   dev.brev
 </code></pre></div>
 <h3 id="linux">Linux</h3>
 <p>Add the the following configuration to <code>/etc/systemd/user/brev.service</code>
