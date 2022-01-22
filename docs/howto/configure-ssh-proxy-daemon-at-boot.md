@@ -35,13 +35,13 @@ $ mkdir -p ~/Library/LaunchAgents/
 start the service with:
 
 ```shell
-launchtl bootstrap gui/$UID ~/Library/LaunchAgents/dev.brev.plist
+launchctl bootstrap gui/$UID ~/Library/LaunchAgents/dev.brev.plist
 ```
 
 check to see that it worked by runnning
 
 ```shell
-launchtl list | grep brev.dev
+launchctl list | grep brev.dev
 ```
 
 which should show output similar to:
