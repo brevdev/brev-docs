@@ -41,7 +41,7 @@ launchctl bootstrap gui/$UID ~/Library/LaunchAgents/dev.brev.plist
 check to see that it worked by runnning
 
 ```shell
-launchctl list | grep brev.dev
+launchctl list | grep brev
 ```
 
 which should show output similar to:
