@@ -6,7 +6,7 @@ The Brev CLI is the preferred interface for Brev, allowing you to use cloud comp
 
 1.  Start by downloading the CLI:
   ```zsh
-  sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`"  && export PATH=/opt/brev/bin:$PATH && brev run-tasks -d
+  sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`"  && export PATH=/opt/brev/bin:$PATH && brev run-tasks -d && brev login
   ```
   **Apple Silicon (M1) Mac?** You'll need to run rosetta first:
   ```zsh

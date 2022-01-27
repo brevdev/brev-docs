@@ -5,7 +5,7 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
 
 1.  Start by downloading the CLI:
     ```zsh
-    sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`" && export PATH=/opt/brev/bin:$PATH && brev run-tasks -d
+    sudo sh -c "`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`" && export PATH=/opt/brev/bin:$PATH && brev run-tasks -d && brev login
     ```
     **Apple Silicon (M1) Mac?** You'll need to run rosetta first:
     ```zsh
