@@ -1054,31 +1054,12 @@
 <ol>
 <li>
 <p>Start by downloading the CLI:
-  <div class="highlight"><pre><span></span><code>sudo sh -c <span class="s2">&quot;`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`&quot;</span>  <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span> <span class="o">&amp;&amp;</span> brev run-tasks -d <span class="o">&amp;&amp;</span> brev login
+if brew is not already installed on your computer install it with
+<div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 </code></pre></div>
-  <strong>Apple Silicon (M1) Mac?</strong> You'll need to run rosetta first:
-  <div class="highlight"><pre><span></span><code><span class="c1"># for M1 macs only</span>
-softwareupdate --install-rosetta
+then add Brev's tap and install <code>brev</code> with
+<div class="highlight"><pre><span></span><code>brew install brevdev/homebrew-brev/brev
 </code></pre></div></p>
-</li>
-<li>
-<p>Add the <code>brev</code> command to your path:</p>
-</li>
-</ol>
-<p><strong>zsh</strong>
-  <div class="highlight"><pre><span></span><code><span class="c1"># zsh</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span>
-<span class="nb">echo</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span> &gt;&gt; ~/.zshrc
-</code></pre></div>
-  <strong>Bash</strong>
-  <div class="highlight"><pre><span></span><code><span class="c1"># bash</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span>
-<span class="nb">echo</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span> &gt;&gt; ~/.bashrc
-</code></pre></div></p>
-<ol>
-<li>
-<p>Run <code>brev login</code>. If you don't already have an account, this will create one and prompt you to create an SSH key.
-  <strong>Your account must be verified to create a workspace. You can verify by putting a credit card on file (we'll never charge you without your permission) or just message us in the <a href="https://discord.gg/NVDyv7TUgJ">Discord</a>.</strong></p>
 </li>
 <li>
 <p>Run <code>brev login</code>. If you don't already have an account, this will create one and prompt you to create an SSH key.
@@ -1086,12 +1067,14 @@ softwareupdate --install-rosetta
 </li>
 <li>
 <p>Use the <code>start</code> command to create your first workspace. <em>Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.</em>
-  <div class="highlight"><pre><span></span><code>brev start &lt;git_url&gt;
+<div class="highlight"><pre><span></span><code>brev start &lt;git_url&gt;
 </code></pre></div></p>
 </li>
+<li>
+<p>Configure brev to <a href="/howto/configure-ssh-proxy-daemon-at-boot/">autostart ssh proxy daemon</a>
+If you run into any issues, run <code>brev refresh</code>.</p>
+</li>
 </ol>
-<p><strong><em>That's it 🤙</em></strong></p>
-<p>If you run into any issues, run <code>brev refresh</code>.</p>
 <p>Not sure what your workspace is called? Try <code>brev ls</code>.</p>
 <p>Wrong organization? Try <code>brev ls orgs</code> and then <code>brev set &lt;org_name&gt;</code>.</p>
 <p>View the full CLI docs below, and reach out to us in the <a href="https://discord.gg/NVDyv7TUgJ">Discord</a> for help! We're here for anything you need. Build something great 🤙</p>
@@ -1143,7 +1126,7 @@ brev ls --org org_name
 <p>Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.</p>
 <h4 id="port-forward">port-forward</h4>
 <p>You can always access the localhost URL of your workspace via the <a href="/howto/find-my-localhost/">public url</a>, or you can port-forward your remote localhost to a local one.</p>
-<p>Run 
+<p>Run
 <div class="highlight"><pre><span></span><code>brev port-forward workspace_name --port localport:remoteport
 </code></pre></div></p>
 <p>For example, to run the brev docs on port 3000:

@@ -666,29 +666,16 @@
                 
 
 <h1 id="welcome-to-brev">Welcome to Brev 🤙</h1>
-<p>Brev is a cloud computer for local development. Use your local tools with a dedicated cloud computer. </p>
+<p>Brev is a cloud computer for local development. Use your local tools with a dedicated cloud computer.</p>
 <h2 id="getting-started">Getting Started</h2>
 <ol>
 <li>
 <p>Start by downloading the CLI:
-    <div class="highlight"><pre><span></span><code>sudo sh -c <span class="s2">&quot;`curl -sf -L https://raw.githubusercontent.com/brevdev/brev-cli/main/bin/install-latest.sh`&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span> <span class="o">&amp;&amp;</span> brev run-tasks -d <span class="o">&amp;&amp;</span> brev login
+if brew is not already installed on your computer install it with
+<div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 </code></pre></div>
-    <strong>Apple Silicon (M1) Mac?</strong> You'll need to run rosetta first:
-    <div class="highlight"><pre><span></span><code><span class="c1"># for M1 macs only</span>
-softwareupdate --install-rosetta
-</code></pre></div></p>
-</li>
-<li>
-<p>Add the <code>brev</code> command to your path:</p>
-<p><strong>zsh</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># zsh</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span>
-<span class="nb">echo</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span> &gt;&gt; ~/.zshrc
-</code></pre></div>
-<strong>Bash</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># bash</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span>
-<span class="nb">echo</span> <span class="nv">PATH</span><span class="o">=</span>/opt/brev/bin:<span class="nv">$PATH</span> &gt;&gt; ~/.bashrc
+then add Brev's tap and install <code>brev</code> with
+<div class="highlight"><pre><span></span><code>brew install brevdev/homebrew-brev/brev
 </code></pre></div></p>
 </li>
 <li>
@@ -700,8 +687,10 @@ softwareupdate --install-rosetta
 <div class="highlight"><pre><span></span><code>brev start &lt;git_url&gt;
 </code></pre></div></p>
 </li>
+<li>
+<p>Configure brev to <a href="/howto/configure-ssh-proxy-daemon-at-boot/">autostart ssh proxy daemon</a></p>
+</li>
 </ol>
-<p><strong><em>That's it 🤙</em></strong></p>
 <p>If you run into any issues, run <code>brev refresh</code>.</p>
 <p>Not sure what your workspace is called? Try <code>brev ls</code>.</p>
 <p>Wrong organization? Try <code>brev ls orgs</code> and then <code>brev set &lt;org_name&gt;</code>.</p>

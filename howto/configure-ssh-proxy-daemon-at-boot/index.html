@@ -764,7 +764,7 @@ the directory <code>~/Library/LaunchAgents/</code> does not exist, you can creat
     <span class="nt">&lt;string&gt;</span>dev.brev<span class="nt">&lt;/string&gt;</span>
     <span class="nt">&lt;key&gt;</span>ProgramArguments<span class="nt">&lt;/key&gt;</span>
     <span class="nt">&lt;array&gt;</span>
-        <span class="nt">&lt;string&gt;</span>/opt/brev/bin/brev<span class="nt">&lt;/string&gt;</span>
+        <span class="nt">&lt;string&gt;</span>brev<span class="nt">&lt;/string&gt;</span>
         <span class="nt">&lt;string&gt;</span>run-tasks<span class="nt">&lt;/string&gt;</span>
     <span class="nt">&lt;/array&gt;</span>
     <span class="nt">&lt;key&gt;</span>KeepAlive<span class="nt">&lt;/key&gt;</span>
@@ -793,7 +793,7 @@ or <code>$HOME/.config/systemd/user/brev.service</code></p>
 
 <span class="k">[Service]</span><span class="w"></span>
 <span class="na">Type</span><span class="o">=</span><span class="s">simple</span><span class="w"></span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/brev/bin/brev run-tasks</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">brev run-tasks</span><span class="w"></span>
 <span class="na">Restart</span><span class="o">=</span><span class="s">always</span><span class="w"></span>
 </code></pre></div>
 <p>enable and start the daemon by running :
