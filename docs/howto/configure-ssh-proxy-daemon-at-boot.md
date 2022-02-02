@@ -22,7 +22,7 @@ $ mkdir -p ~/Library/LaunchAgents/
     <string>dev.brev</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/opt/brev/bin/brev</string>
+        <string>brev</string>
         <string>run-tasks</string>
     </array>
     <key>KeepAlive</key>
@@ -65,7 +65,7 @@ After=systend-user-sessions.service
 
 [Service]
 Type=simple
-ExecStart=/opt/brev/bin/brev run-tasks
+ExecStart=brev run-tasks
 Restart=always
 ```
 

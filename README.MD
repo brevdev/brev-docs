@@ -28,7 +28,7 @@ Discussions:
 
 # HOW TO RUN THIS LOCALLY
 
-## Run locally 
+## Run locally
 `mkdocs serve -a localhost:3003`
 
 ## Deploy
