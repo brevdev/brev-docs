@@ -51,6 +51,13 @@ If you're experiencing any machine problems, including self-inflicted ones like 
 #### run-tasks
 This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run `brev run-tasks`. If you'd like to make this a background process, add a `-d` to the end.
 
+```
+brev run-tasks -d
+```
+
+This will have to be run every time you reboot unless you configure [autostart](/howto/configure-ssh-proxy-daemon-at-boot)
+
+
 #### start
 Create a new workspace from a git URL or to start a stopped workspace.
 
