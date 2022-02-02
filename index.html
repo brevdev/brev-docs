@@ -670,8 +670,8 @@
 <h2 id="getting-started">Getting Started</h2>
 <ol>
 <li>
-<p>Start by downloading the CLI:
-if brew is not already installed on your computer install it with
+<p>Start by downloading the CLI:</p>
+<p>if brew is not already installed on your computer install it with
 <div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
 </code></pre></div>
 then add Brev's tap and install <code>brev</code> with
@@ -683,12 +683,22 @@ then add Brev's tap and install <code>brev</code> with
 <p><strong>Your account must be verified to create a workspace. You can verify by putting a credit card on file (we'll never charge you without your permission) or just message us in the <a href="https://discord.gg/NVDyv7TUgJ">Discord</a>.</strong></p>
 </li>
 <li>
-<p>Use the <code>start</code> command to create your first workspace. <em>Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.</em>
+<p>Use the <code>start</code> command to create your first workspace. <em>Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.</em></p>
 <div class="highlight"><pre><span></span><code>brev start &lt;git_url&gt;
-</code></pre></div></p>
+</code></pre></div>
 </li>
 <li>
-<p>Configure brev to <a href="/howto/configure-ssh-proxy-daemon-at-boot/">autostart ssh proxy daemon</a></p>
+<p>connect your local computer to your cluster by running the background daemon</p>
+<div class="highlight"><pre><span></span><code>brev run-tasks -d
+</code></pre></div>
+</li>
+<li>
+<p>you are now ready to ssh into your instance! you can find it by running</p>
+<div class="highlight"><pre><span></span><code>brev ls
+</code></pre></div>
+</li>
+<li>
+<p>(Optional) Configure brev to <a href="/howto/configure-ssh-proxy-daemon-at-boot/">autostart ssh proxy daemon</a> so you don't have to run <a href="/reference/brev-cli#run-tasks">run-tasks</a> on boot.</p>
 </li>
 </ol>
 <p>If you run into any issues, run <code>brev refresh</code>.</p>
