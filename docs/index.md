@@ -9,9 +9,9 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
     ```
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
-    then add Brev's tap and install `brev` with
+    then install `brev` with
     ```
-    brew install brevdev/homebrew-brev/brev
+    brew install brev
     ```
 
 2. Run `brev login`. If you don't already have an account, this will create one and prompt you to create an SSH key.
