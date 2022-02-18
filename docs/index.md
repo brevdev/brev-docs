@@ -8,14 +8,7 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
     ```
     brew install brevdev/homebrew-brev/brev
     ```
-    <details>
-    <summary>Need to install Brew?</summary>
-    
-    if brew is not already installed on your computer install it with
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-    </details>
+
 
 2. **Create an account:** 
     
