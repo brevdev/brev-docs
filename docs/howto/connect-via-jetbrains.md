@@ -10,7 +10,7 @@ You will need to open JetBrains Gateway instead of your locally installed JetBra
 
 We guide you through this process the first time you download the CLI, but a link to manually download the software is here: [jetbrains.com/remote-development/gateway](https://www.jetbrains.com/remote-development/gateway/)
 
-1. Run `brev jetbrains` in your terminal.
+1. Run `brev jetbrains` in your terminal. Only for Jetbrains products, this process needs to stay running to maintains the connection to your computer. Our next major release gets rid of this step (eta 2 weeks--  March 2022).  
 
 2. Open JetBrains Gateway and select "Connect Via SSH".
 ![Screenshot](media/jetbrains1.png)

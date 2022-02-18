@@ -46,6 +46,8 @@ Brev is a cloud computer for local development. Use your local tools with a dedi
     brev open workspace_name
     ```
 
+    Follow the guide [here](/howto/connect-via-jetbrains/) for Jetbrains products
+
     
 6. **Make your environment reproducible**
 
