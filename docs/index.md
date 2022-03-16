@@ -1,4 +1,4 @@
-# Welcome to Brev! 🤙
+# Welcome to Brev <3 Explo 🤙
 Brev is a cloud computer for local development. Use your local tools with a dedicated cloud computer.
 
 ##  Getting Started
