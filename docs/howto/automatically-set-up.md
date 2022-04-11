@@ -43,6 +43,7 @@ sudo apt-get install -y nodejs
 ```
 
 ### Install NPM Packages Without Sudo
+Note: this might not work depending on your shell. We recommend installing globally with sudo. 
 ```zsh
 # install npm packages globally without sudo
 # modified from https://stackoverflow.com/questions/18088372/how-to-npm-install-global-not-as-root

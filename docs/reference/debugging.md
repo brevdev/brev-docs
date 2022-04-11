@@ -47,3 +47,8 @@ or if someone else in your org has the same workspace, you can `brev start` by n
 # if someone else in your org has the workspace
 brev start brev-cli 
 ```
+
+##  Global npm install issues
+If you try npm installing something globally, it might not work without sudo.
+
+Rerun the command with sudo, ex `sudo npm install http-server -g`. Reach out to support if you're still having issues: https://discord.gg/NVDyv7TUgJ
