@@ -29,12 +29,16 @@ Discussions:
 # HOW TO RUN THIS LOCALLY
 
 ## Run locally
-`mkdocs serve -a localhost:3003`
+```
+mkdocs serve -a localhost:3003
+```
 
 ## Deploy
 
 Make a branch with the latest changes
 
-`mkdocs gh-deploy`
+```
+mkdocs gh-deploy
+```
 
 Push that branch and let github pages do the rest 🎉

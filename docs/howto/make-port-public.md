@@ -1,9 +1,46 @@
-# How To
-## Make a port public
+# How To Make A Port Public
 
-If you're accessing your localhost url such as `3000-jelly-brevdev.brev.sh`, you'll notice it requires your password.
 
-If you want to remove auth to use Postman, consume the endpoint in your frontend, or just show your mom what you built, you can do so in the `.brev/ports.yaml` added to every Brev workspace.
+ If you're inside your Brev workspace and are running something on localhost, you can access it using your workspace URL.
+
+
+run `brev ls` to see your workspace`s url
+```
+$ brev ls
+
+You have 1 workspaces in Org brev.dev
+NAME                                     STATUS             ID            URL
+brevdev/brev-docs                        RUNNING            lhw2g3i9c     brevdevbrevdocs-3i9c-brevdev.brev.sh
+
+
+Connect to your machine with one of the following:
+	ssh brevdevbrevdocs-3i9c
+
+```
+
+edit you're project's `.brev/ports.yaml` and specify which port that you want to expose 
+
+```
+#############################################################################################
+##### Expose your port publicly here so other people or services can use it.            #####
+#####                                                                                   #####
+##### ex. You want to connect a frontend to a backend. Run the project you want to      #####
+##### expose and add its port here. This service can be accessed at                     #####
+##### 3000-projectName-user-org.brev.sh.                                                #####
+#####                                                                                   #####
+##### Read more here: https://github.com/brevdev/dotbrev/blob/main/README.md            #####
+#############################################################################################
+
+version: "1.0"
+ports:
+  - "3003"
+  # - "5000"
+  # - "8000"
+```
+
+and then navigate to the workspace's public url `3003-brevdevbrevdocs-3i9c-brevdev.brev.sh`. The workspace url is prefixed with the port number that you chose to expose. 
+
+
 
 ![Screenshot](media/ports.png)
 

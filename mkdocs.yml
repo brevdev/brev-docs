@@ -23,14 +23,15 @@ nav:
   - How-Tos:
       - Home: howto/index.md
       - Common Installations: howto/automatically-set-up.md
-      - Find Your Localhost: howto/find-my-localhost.md
+      - Remotely Access a Workspace's localhost Without Making In Public: howto/access-workspace-localhost.md
       - Make a Port Public: howto/make-port-public.md
       - Environment Variables: howto/env-vars-dot-brev.md
       - Troubleshoot Reset: howto/troubleshoot-reset.md
       - Encrypted Secrets: howto/secret-variables.md
       - Create an Organization: howto/create-org.md
       - Invite Users to Your Organization: howto/invite-users-to-org.md
-      - Configure SSH Proxy Daemon at Boot: howto/configure-ssh-proxy-daemon-at-boot.md
+      - Configure Brev Daemons: howto/configure-brev-daemons.md
+      - Connect Via SSH: howto/connect-via-ssh.md
       - Connect Via Emacs: howto/connect-via-emacs.md
       - Connect Via VSCode: howto/connect-via-vscode.md
       - Connect Via Jetbrains: howto/connect-via-jetbrains.md
@@ -39,6 +40,7 @@ nav:
       - Setup Scripts (.brev): reference/dot-brev-setup-script.md
       - CLI Docs: reference/brev-cli.md
       - Debugging: reference/debugging.md
+      - Workspace to Workspace Networking: reference/p2p-workspace-networking.md
   # - Discussions:
   #     - Home: discussions/index.md
   #     - Brev DB Best Practices: discussions/best-practices-for-brev-database.md

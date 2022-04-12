@@ -5,7 +5,7 @@ Make sure you have the [Brev CLI installed](/)
 In emacs execute `M-x dired RET` and enter the directory
 
 ```
-/ssh:<workspace-name>:/home/brev/workspace/vue-coffee
+/sshx:<workspace-name>:/home/brev/workspace/vue-coffee
 ```
 
 
