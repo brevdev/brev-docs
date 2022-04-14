@@ -21,9 +21,9 @@ Discussions:
     - Shed light on how and why.
 
 ## TO ADD A PAGE, FOLLOW THIS CHECKLIST
-[ ] Create the md file for your page in whichever section folder it best fits.
-[ ] Add the page to the sidebar in mkdocs.yml, otherwise no one will find it.
-[ ] In the index.md for the section's folder, add a couple lines
+- [ ] Create the md file for your page in whichever section folder it best fits.
+- [ ] Add the page to the sidebar in mkdocs.yml, otherwise no one will find it.
+- [ ] In the index.md for the section's folder, add a couple lines
 
 
 # HOW TO RUN THIS LOCALLY
