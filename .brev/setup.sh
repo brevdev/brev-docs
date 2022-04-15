@@ -25,3 +25,4 @@ source $HOME/.poetry/env
 ##### mkdocs #####
 pip install mkdocs
 pip install mkdocs-material
+

@@ -1,10 +1,24 @@
-# How To
+# How To Configure Brev Daemon Processes
 
-## Configure ssh proxy to start at Boot
+## for brev versions greater than or equal to `0.7.0`
+
+brev-cli has many background processes that are used to keep configurations up to date and connect you automatically to brev's point to point vpn network. These commands are started and enabled at boot with the command below. This command must be run as root and the user that you want to configure must be provided. You should run this command whenever you update the cli as well. 
+
+
+
+```shell
+sudo brev configure --user $USER
+```
+
+--- 
+
+## for brev versions: less than `0.7.0`
+
+### configure ssh proxy to start at Boot
 
 Make sure that you have installed the [cli](https://github.com/brevdev/brev-cli/)
 
-### Mac OS
+#### Mac OS
 
 Add the following configuration to `~/Library/LaunchAgents/dev.brev.plist`. If
 the directory `~/Library/LaunchAgents/` does not exist, you can create it with
@@ -50,7 +64,7 @@ which should show output similar to:
 4203    0   dev.brev
 ```
 
-### Linux
+#### Linux
 
 Add the the following configuration to `/etc/systemd/user/brev.service`
 or `$HOME/.config/systemd/user/brev.service`

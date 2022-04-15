@@ -86,7 +86,7 @@ Everything in `/home/workspace` will be saved when it boots up again.
 Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an `--active-org` flag for scripting purposes.
 
 #### ls
-Print a tabular view of your workspaces or orgs
+Print a tabular view of your workspaces, orgs, or hosts
 
 ```zsh
 # print orgs
@@ -97,6 +97,9 @@ brev ls
 
 # print workspaces within any organization
 brev ls --org org_name
+
+# print hosts within a network
+brev ls hosts
 ```
 
 #### set
@@ -187,8 +190,49 @@ Ex: personal AWS credentials file
 ```
 
 #### ssh-key
+
 Get your ssh keys to add to your git provider.
+
 ```zsh
 brev ssh-key
 ```
+
 Quick links to add it to [Github](https://github.com/settings/keys) or [Gitlab](https://gitlab.com/-/profile/keys)
+
+#### configure
+
+configures, enables, and starts brev background daemons. Some daemons must be run as root, but others are run as a regular user so the command must be run as root, and must be provided the `--user` flag or else it will not work. This command is the same as `sudo brev tasks configure --user 1000` and is included here for convenience.
+
+```zsh
+sudo brev configure --user $USER
+```
+
+#### tasks
+
+tasks are where brev background tasks can be executed and configured.
+
+##### configure
+
+configures, enables, and starts brev background daemons. Some daemons must be run as root, but others are run as a regular user so the command must be run as root, and must be provided the `--user` flag or else it will not work.
+
+
+```zsh
+sudo brev configure --user $USER
+```
+
+##### run
+
+run a task, used by os daemon scheduler to launch daemon processes
+
+###### sshcd
+
+configures a daemon to automatically write and update ssh config to use workspaces and private key
+
+
+###### vpnd
+
+configures a daemon to handle connecting your laptop to brev's point to point vpn network.
+
+###### rpcd
+
+launches an rpc socket server for processes to have ipc with the brev-cli.

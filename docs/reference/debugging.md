@@ -17,7 +17,7 @@ If you run `brev start` and see the following 500 error:
 Name flag omitted, using auto generated name: brevdev/hello-react
 Workspace is starting. This can take up to 2 minutes the first time.
 
-[error] /home/runner/work/brev-cli/brev-cli/pkg/cmd/start/start.go:260 
+[error] /home/runner/work/brev-cli/brev-cli/pkg/cmd/start/start.go:260
 	: https://ade5dtvtaa.execute-api.us-east-1.amazonaws.com/api/organizations/ejmrvoj8m/workspaces?utm_source=cli 500 Internal Server Error
 ```
 It is likely that you just deleted the workspace and it is still deleting. Please wait 5 seconds and try again.
@@ -38,17 +38,25 @@ brev delete brev-cli
 
 ```zsh
 # if someone else in your org has the workspace
-brev start https://github.com/brevdev/brev-cli 
+brev start https://github.com/brevdev/brev-cli
 ```
 
 or if someone else in your org has the same workspace, you can `brev start` by name to create your own workspace. Run `brev ls --all` to see workspaces already in your org.
 
 ```zsh
 # if someone else in your org has the workspace
-brev start brev-cli 
+brev start brev-cli
 ```
 
 ##  Global npm install issues
 If you try npm installing something globally, it might not work without sudo.
 
 Rerun the command with sudo, ex `sudo npm install http-server -g`. Reach out to support if you're still having issues: https://discord.gg/NVDyv7TUgJ
+
+## Cannot navigate to workspace url in chrome / brave
+
+we have noticed that some browser configurations are not compatible with brev's point to point vpn networking out of the box. This is because dns over tls does not work with brev because we have a dns server that runs on on the local address 100.100.100.100 that is used to lookup the workspaces that are associated with hostnames. This DNS server does not support DNS over https, but it will fall back on your OS dns server to resolve dns requests that are not to a workspace hostname.
+
+To disable this setting on Chrome navigate to your [security settings](chrome://settings/security) and scroll down to the setting `Use secure DNS` and  disable the checkbox.
+
+![chrome settings window](./chrome-settihngs-arrow.png)
