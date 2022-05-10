@@ -1,9 +1,11 @@
 # How To
 ## Copy Personal Settings
-You probably have specific settings you wanna bring to every workspace.
+You probably have specific settings you wanna bring to every workspace, but only on your workspaces.
 
-Brev.dev supports you having your own setup script. The repo has a `.brev/setup.sh` file that gets run on workspace complete, but Brev.dev also runs your personal `.brev/setup.sh` if it exists.
+Brev.dev supports each developer having their own setup script. The repo has a `.brev/setup.sh` file that gets run on every single workspace, but Brev.dev also runs each developer's personal `.brev/setup.sh` if it exists.
 
+
+## Create a Personal Settings Repo
 
 From [the console](https://console.brev.dev){:target="_blank"}, go to your profile by clicking "Account" on the top-right.
 ![Screenshot](media/personal-settings-2.png)
@@ -13,7 +15,7 @@ You'll see a section called **Personal Settings**. This has a git repo that Brev
 
 To setup your personal settings:
 
-1. [Click here to fork the personal settings repository](https://github.com/brevdev/user-dotbrev/fork)
+1. [Click here to fork the personal settings repository](https://github.com/brevdev/user-dotbrev/fork) (you can make your forked repo private if you like)
 
 2. Copy the new url, and paste it in the input field under **Personal Settings** and click the save button.
 

@@ -2,6 +2,8 @@
 
 The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.
 
+Every command has a `--help` flag if you need to see options.
+
 ##  Getting Started
 
 1.  Start by downloading the CLI:
@@ -46,7 +48,10 @@ If you no longer need a machine, and you'd like an action more permanent than [s
 `brev delete workspace_name`
 
 #### reset
-If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
+If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. 
+
+**Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
+👆 This makes it really easy to change your environment without needing to commit the changes to main. 
 
 #### run-tasks
 This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run `brev run-tasks`. If you'd like to make this a background process, add a `-d` to the end.
@@ -74,6 +79,9 @@ If you have a Brev workspace in a stopped state, run
 brev start workspace_name
 ```
 to start it up again. Note, this might take a minute or two.
+
+**Note: if you want to make multiple workspaces with the same git repo, use the --name flag with brev start**
+You can have multiple workspaces with the same git repo, however, each workspace must have a unique name.
 
 #### stop
 If you don't plan on using your Brev workspace, you can temporarily pause it by running

@@ -61,6 +61,7 @@ theme:
     code: Space Mono
   features:
     - navigation.expand
+    - content.tabs.link
 
 markdown_extensions:
   - pymdownx.highlight

@@ -58,3 +58,9 @@ Do you want to run Brev.dev locally without needing internet? We're launching th
 
 <!-- ##  Run Brev without internet
 Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ -->
+
+<!-- ##  Changing the setup script
+Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ
+
+<!-- ##  Run Brev without internet
+Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ --> -->
