@@ -1,5 +1,8 @@
 # How To
 
+### [Copy Personal Settings](copy-personal-settings.md)
+Copy personal settings into every Brev.dev workspace
+
 ### [Common .Brev Installations](automatically-set-up.md)
 Cheatsheet for common installations for your .brev setup script
 

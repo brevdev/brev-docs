@@ -22,6 +22,7 @@ nav:
   #     - Tutorial 1: tutorials/automatically-set-up.md
   - How-Tos:
       - Home: howto/index.md
+      - Copy Personal Settings: howto/copy-personal-settings.md
       - Common Installations: howto/automatically-set-up.md
       - Find Your Localhost: howto/find-my-localhost.md
       - Make a Port Public: howto/make-port-public.md
@@ -58,6 +59,8 @@ theme:
   font:
     text: Red Hat Text
     code: Space Mono
+  features:
+    - navigation.expand
 
 markdown_extensions:
   - pymdownx.highlight
