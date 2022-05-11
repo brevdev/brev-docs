@@ -1104,8 +1104,8 @@ Workspace commands, Context commands, SSH commands, and Housekeeping commands.</
 <p><code>brev delete workspace_name</code></p>
 <h4 id="reset">reset</h4>
 <p>If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a <a href="/reference/dot-brev-setup-script/">.brev setup script</a> or you'll have to reinstall everythign manually. </p>
-<p>**Note: even if not committed, the <code>.brev/setup.sh</code> script will persist because everythign in <code>/home/workspace</code> will be saved.
-👆 This makes it really easy to change your environment without needing to commit the changes to main. </p>
+<p><strong>Note: even if not committed, the <code>.brev/setup.sh</code> script will persist because everythign in <code>/home/workspace</code> will be saved.
+👆 This makes it really easy to change your environment without needing to commit the changes to main.</strong></p>
 <h4 id="run-tasks">run-tasks</h4>
 <p>This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run <code>brev run-tasks</code>. If you'd like to make this a background process, add a <code>-d</code> to the end.</p>
 <div class="highlight"><pre><span></span><code>brev run-tasks -d
