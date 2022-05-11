@@ -147,7 +147,7 @@
       
       
       <link rel="icon" href="../../favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.9">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
     
     
       
@@ -155,10 +155,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.120efc48.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3de6f41f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.9647289d.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
         
       
     
@@ -325,7 +325,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -350,6 +350,20 @@
     <li class="md-nav__item">
       <a href="../../howto/" class="md-nav__link">
         Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/copy-personal-settings/" class="md-nav__link">
+        Copy Personal Settings
       </a>
     </li>
   
@@ -460,20 +474,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../howto/invite-users-to-org/" class="md-nav__link">
-        Invite Users to Your Organization
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../howto/configure-ssh-proxy-daemon-at-boot/" class="md-nav__link">
         Configure SSH Proxy Daemon at Boot
       </a>
@@ -518,6 +518,20 @@
     <li class="md-nav__item">
       <a href="../../howto/connect-via-jetbrains/" class="md-nav__link">
         Connect Via Jetbrains
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../howto/invite-users-to-org/" class="md-nav__link">
+        Invite Users
       </a>
     </li>
   
@@ -1052,6 +1066,7 @@
 
 <h1 id="brev-cli">Brev CLI</h1>
 <p>The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.</p>
+<p>Every command has a <code>--help</code> flag if you need to see options.</p>
 <h2 id="getting-started">Getting Started</h2>
 <ol>
 <li>
@@ -1088,7 +1103,9 @@ Workspace commands, Context commands, SSH commands, and Housekeeping commands.</
 <p>If you no longer need a machine, and you'd like an action more permanent than <a href="/reference/brev-cli/#stop">stop</a>, you can delete the workspace.</p>
 <p><code>brev delete workspace_name</code></p>
 <h4 id="reset">reset</h4>
-<p>If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a <a href="/reference/dot-brev-setup-script/">.brev setup script</a> or you'll have to reinstall everythign manually. **Note: even if not committed, the <code>.brev/setup.sh</code> script will persist because everythign in <code>/home/workspace</code> will be saved.</p>
+<p>If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a <a href="/reference/dot-brev-setup-script/">.brev setup script</a> or you'll have to reinstall everythign manually. </p>
+<p>**Note: even if not committed, the <code>.brev/setup.sh</code> script will persist because everythign in <code>/home/workspace</code> will be saved.
+👆 This makes it really easy to change your environment without needing to commit the changes to main. </p>
 <h4 id="run-tasks">run-tasks</h4>
 <p>This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run <code>brev run-tasks</code>. If you'd like to make this a background process, add a <code>-d</code> to the end.</p>
 <div class="highlight"><pre><span></span><code>brev run-tasks -d
@@ -1105,6 +1122,8 @@ Workspace commands, Context commands, SSH commands, and Housekeeping commands.</
 <div class="highlight"><pre><span></span><code>brev start workspace_name
 </code></pre></div>
 to start it up again. Note, this might take a minute or two.</p>
+<p><strong>Note: if you want to make multiple workspaces with the same git repo, use the --name flag with brev start</strong>
+You can have multiple workspaces with the same git repo, however, each workspace must have a unique name.</p>
 <h4 id="stop">stop</h4>
 <p>If you don't plan on using your Brev workspace, you can temporarily pause it by running
 <div class="highlight"><pre><span></span><code>brev stop workspace_name
@@ -1281,10 +1300,10 @@ Quick links to add it to <a href="https://github.com/settings/keys">Github</a> o
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.6e54b5cd.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2e1ee47.min.js"></script>
       
     
   </body>

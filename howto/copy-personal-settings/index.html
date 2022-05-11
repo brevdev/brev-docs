@@ -151,7 +151,7 @@
     
     
       
-        <title>Create an Organization - Brev Dev Docs</title>
+        <title>Copy Personal Settings - Brev Dev Docs</title>
       
     
     
@@ -205,7 +205,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-a-brev-organization" class="md-skip">
+        <a href="#how-to" class="md-skip">
           Skip to content
         </a>
       
@@ -237,7 +237,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create an Organization
+              Copy Personal Settings
             
           </span>
         </div>
@@ -362,11 +362,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../copy-personal-settings/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Copy Personal Settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Copy Personal Settings
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copy-personal-settings" class="md-nav__link">
+    Copy Personal Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-personal-settings-repo" class="md-nav__link">
+    Create a Personal Settings Repo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-it-yours" class="md-nav__link">
+    Make it yours!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -460,21 +515,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../create-org/" class="md-nav__link">
         Create an Organization
       </a>
-      
     </li>
   
 
@@ -666,6 +711,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copy-personal-settings" class="md-nav__link">
+    Copy Personal Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-personal-settings-repo" class="md-nav__link">
+    Create a Personal Settings Repo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#make-it-yours" class="md-nav__link">
+    Make it yours!
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -678,12 +752,29 @@
                 
 
 
-<h1 id="create-a-brev-organization">Create a Brev Organization</h1>
-<p>You can create a Brev organization in the <a href="https://console.brev.dev" target="_blank">Brev dashboard</a>.</p>
-<p>From the Organization dropdown at the top, click <code>Create New Organization</code>.</p>
-<p><img alt="Screenshot" src="../media/createorg1_annotated.png" /></p>
-<p>Give it a name, and click Create! </p>
-<p><img alt="Screenshot" src="../media/createorg2.png" /></p>
+<h1 id="how-to">How To</h1>
+<h2 id="copy-personal-settings">Copy Personal Settings</h2>
+<p>You probably have specific settings you wanna bring to every workspace, but only on your workspaces.</p>
+<p>Brev.dev supports each developer having their own setup script. The repo has a <code>.brev/setup.sh</code> file that gets run on every single workspace, but Brev.dev also runs each developer's personal <code>.brev/setup.sh</code> if it exists.</p>
+<h2 id="create-a-personal-settings-repo">Create a Personal Settings Repo</h2>
+<p>From <a href="https://console.brev.dev" target="_blank">the console</a>, go to your profile by clicking "Account" on the top-right.
+<img alt="Screenshot" src="../media/personal-settings-2.png" /></p>
+<!-- ![Screenshot](media/personal-settings.png) -->
+
+<p>You'll see a section called <strong>Personal Settings</strong>. This has a git repo that Brev.dev clones into every workspace and runs the <code>.brev/setup.sh</code> it contains.</p>
+<p>To setup your personal settings:</p>
+<ol>
+<li>
+<p><a href="https://github.com/brevdev/user-dotbrev/fork">Click here to fork the personal settings repository</a> (you can make your forked repo private if you like)</p>
+</li>
+<li>
+<p>Copy the new url, and paste it in the input field under <strong>Personal Settings</strong> and click the save button.</p>
+</li>
+</ol>
+<p>You're done!</p>
+<p>Now every workspace will clone this repo and run your personal settings.</p>
+<h2 id="make-it-yours">Make it yours!</h2>
+<p>Clone your forked repo-- or from any workspace, cd into <code>/workspace/user-dotbrev</code>. Commit and push any changes and your next Brev.dev workspace will automatically clone the latest.</p>
 
               
             </article>
@@ -697,7 +788,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../secret-variables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Encrypted Secrets" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -706,20 +797,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Encrypted Secrets
+              Home
             </div>
           </div>
         </a>
       
       
         
-        <a href="../configure-ssh-proxy-daemon-at-boot/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure SSH Proxy Daemon at Boot" rel="next">
+        <a href="../automatically-set-up/" class="md-footer__link md-footer__link--next" aria-label="Next: Common Installations" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Configure SSH Proxy Daemon at Boot
+              Common Installations
             </div>
           </div>
           <div class="md-footer__button md-icon">
