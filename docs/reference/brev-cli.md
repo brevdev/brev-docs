@@ -51,7 +51,7 @@ If you no longer need a machine, and you'd like an action more permanent than [s
 If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. 
 
 **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
-👆 This makes it really easy to change your environment without needing to commit the changes to main. 
+👆 This makes it really easy to change your environment without needing to commit the changes to main.**
 
 #### run-tasks
 This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run `brev run-tasks`. If you'd like to make this a background process, add a `-d` to the end.
