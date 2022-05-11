@@ -14,7 +14,7 @@ Click on "New Secret and populate the form accordingly.
 
 You can load environment variables or change the type from "Environment Variables" to "File" for something like the .aws/credentials file (as shown in the picture).
 
-### Setting secrets or environment variables for your organization
+### Setting secrets or environment variables for your o`rganization
 
 The example above sets your personal secret for all of your Brev workspaces. If you wish to set a variable or secret for your entire org, go to your organization's settings from the organization drop down
 ![Screenshot](media/org-dropdown-window.png)

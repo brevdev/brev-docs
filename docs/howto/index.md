@@ -18,6 +18,12 @@ How to add environment variables in your setup script
 ### [Reset Your Machine to Troubleshoot](troubleshoot-reset.md)
 You can reset your Brev machine and get a newly configured one to troubleshoot.
 
+### [Invite Users](invite-users.md)
+You can invite users to your org from the CLI or console
+
+<!-- ### [Share Your Workspace](share-your-workspace.md)
+Get a link to clone your dev environment in someone else's Brev.dev account -->
+
 ### Connect to a workspace
 
 * with [emacs](connect-via-emacs.md)

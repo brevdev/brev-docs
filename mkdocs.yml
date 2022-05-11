@@ -30,11 +30,12 @@ nav:
       - Troubleshoot Reset: howto/troubleshoot-reset.md
       - Encrypted Secrets: howto/secret-variables.md
       - Create an Organization: howto/create-org.md
-      - Invite Users to Your Organization: howto/invite-users-to-org.md
       - Configure SSH Proxy Daemon at Boot: howto/configure-ssh-proxy-daemon-at-boot.md
       - Connect Via Emacs: howto/connect-via-emacs.md
       - Connect Via VSCode: howto/connect-via-vscode.md
       - Connect Via Jetbrains: howto/connect-via-jetbrains.md
+      - Invite Users: howto/invite-users-to-org.md
+      # - Share Your Workspace: howto/share-your-workspace.md
   - Reference:
       - Home: reference/index.md
       - Setup Scripts (.brev): reference/dot-brev-setup-script.md

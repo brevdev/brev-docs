@@ -53,14 +53,10 @@ If you try npm installing something globally, it might not work without sudo.
 
 Rerun the command with sudo, ex `sudo npm install http-server -g`. Reach out to support if you're still having issues: https://discord.gg/NVDyv7TUgJ
 
+##  See all the startup logs
+Sometimes weird issues happen when configuring the machine, for example, the project folder is empty because ssh keys weren't configured and the repo couldn't be cloned. 
+
+You can view the full startup logs by running `sudo cat /var/log/brev-workspace.log` inside your workspace.
+
 ##  Run Brev without internet
 Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ
-
-<!-- ##  Run Brev without internet
-Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ -->
-
-<!-- ##  Changing the setup script
-Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ
-
-<!-- ##  Run Brev without internet
-Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ --> -->
