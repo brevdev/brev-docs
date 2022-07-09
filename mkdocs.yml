@@ -4,6 +4,8 @@ extra_css:
   - stylesheets/style.css
   - stylesheets/highlight.css
   - stylesheets/custom.scss
+extra_javascript:
+  - js/fullstory.js
 copyright: brev.dev 2021 -- All rights reserved
 extra:
   copyright: Brev 2021
