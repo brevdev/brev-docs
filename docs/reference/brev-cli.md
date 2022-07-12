@@ -1,41 +1,7 @@
-# Brev CLI
-
+# Brev CLI Reference
 The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.
 
 Every command has a `--help` flag if you need to see options.
-
-##  Getting Started
-
-1.  Start by downloading the CLI:
-if brew is not already installed on your computer install it with
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-then add Brev's tap and install `brev` with
-```
-brew install brevdev/homebrew-brev/brev
-```
-
-
-3. Run `brev login`. If you don't already have an account, this will create one and prompt you to create an SSH key.
-  **Your account must be verified to create a workspace. You can verify by putting a credit card on file (we'll never charge you without your permission) or just message us in the [Discord](https://discord.gg/NVDyv7TUgJ).**
-
-
-3. Use the `start` command to create your first workspace. *Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.*
-```zsh
-brev start <git_url>
-```
-
-4. Configure brev to [autostart ssh proxy daemon](/howto/configure-ssh-proxy-daemon-at-boot/)
-If you run into any issues, run `brev refresh`.
-
-Not sure what your workspace is called? Try `brev ls`.
-
-Wrong organization? Try `brev ls orgs` and then `brev set <org_name>`.
-
-View the full CLI docs below, and reach out to us in the [Discord](https://discord.gg/NVDyv7TUgJ) for help! We're here for anything you need. Build something great 🤙
-
-## Brev CLI Reference
 
 Brev CLI commands are broken up into 4 categories
 Workspace commands, Context commands, SSH commands, and Housekeeping commands.
@@ -48,7 +14,7 @@ If you no longer need a machine, and you'd like an action more permanent than [s
 `brev delete workspace_name`
 
 #### reset
-If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually. 
+ This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually.
 
 **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
 👆 This makes it really easy to change your environment without needing to commit the changes to main.**
@@ -64,21 +30,291 @@ This will have to be run every time you reboot unless you configure [autostart](
 
 
 #### start
-Create a new workspace from a git URL or to start a stopped workspace.
 
-Supplying a git url,
-```zsh
-brev start git_url
+create start and join a workspace 
+#### Synopsis
+
 ```
- will create a new workspace with the git url cloned. Create a [.brev directory](/reference/dot-brev-setup-script/) and anyone can get their own workspace that comes configured for immediate development.
 
-When viewed from the web dashboard, workspaces within an org become projects, allowing your organization's members to get their own cloned workspace with one click.
-
-If you have a Brev workspace in a stopped state, run
-```zsh
-brev start workspace_name
+brev start { ARG | -e} {-n | --name} {-c | --class} { -s | --setup-script} 
+	{-r | --setup-repo} {-p | --setup-path } { -o | --org}
 ```
-to start it up again. Note, this might take a minute or two.
+
+#### Description
+
+brev start can do the following:
+
+- start a stopped workspace
+- join a workspace in an organization
+- create an empty workspace
+- create a workspace from a directory on your computer 
+- create a workspace from a git url
+
+##### Start A Stopped Workspace 
+
+If you have a workspace in a stopped state, you can start it by using its id 
+or workspace name. If you have a workspace named `frontend` that you either 
+created or joined that is in a `STOPPED` state, you can start it again by running
+
+```
+$ brev start frontend
+```
+
+to get find your workspace name or id, see [finding your workspace](howto/find-your-workspace). 
+
+##### Join a Workspace in an Organization
+
+
+
+#### Flags
+
+##### -n --name <name>
+
+specify the name for your workspace instead of brev-cli generating one for you.
+
+for example, to override the name of a workspace when creating a workspace from 
+a git repo you could do it with then `-n` flag. This example creates a repo with 
+the name `cli` from the git repo `https://github.com/brevdev/brev-cli`.
+
+```
+$ brev start https://github.com/brevdev/brev-cli -n cli
+```
+
+
+#### Examples
+##### Create an empty workspace
+
+```
+$ brev start -e -n foo
+```
+
+which has an output similar too:
+
+```
+name foo
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+workspace is starting. this can take up to 2 minutes the first time.
+
+you can safely ctrl+c to exit
+⣽  workspace is deploying
+your workspace is ready!
+
+connect to the workspace:
+	brev open foo	# brev open <name> -> open workspace in preferred editor
+	brev shell foo	# brev shell <name> -> ssh into workspace (shortcut)
+	ssh foo-8j4u	# ssh <ssh-name> -> ssh directly to workspace
+
+```
+
+or
+
+```
+$ brev start --empty --name foo
+```
+
+which has an output similar too:
+
+```
+name foo
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+workspace is starting. this can take up to 2 minutes the first time.
+
+you can safely ctrl+c to exit
+⣽  workspace is deploying
+your workspace is ready!
+
+connect to the workspace:
+	brev open foo	# brev open <name> -> open workspace in preferred editor
+	brev shell foo	# brev shell <name> -> ssh into workspace (shortcut)
+	ssh foo-8j4u	# ssh <ssh-name> -> ssh directly to workspace
+
+```
+
+view your workspace with `brev ls`
+
+
+##### create a workspace, and do not block shell until workspace is created
+
+use the `-d` or `--detached` flag to create a workspace and immediately exit
+rather than wait for workspace to be successfully created before exiting.
+
+```
+$ brev start -d -e -n bar
+```
+
+which has an output similar too:
+
+```
+name bar
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+Workspace is starting. This can take up to 2 minutes the first time.
+```
+
+##### Create a workspace from a file path
+
+if in your current directory has a directory in it called `merge-json`, you can
+create a workspace using the contents of that directory using
+`brev start merge-json`
+
+```
+$ ls
+merge-json
+```
+
+```
+$ brev start merge-json
+
+```
+
+which has an output similar too:
+
+```
+Workspace is starting. This can take up to 2 minutes the first time.
+
+name merge-json
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+You can safely ctrl+c to exit
+⡿  workspace is deploying
+Your workspace is ready!
+
+Connect to the workspace:
+	brev open merge-json	# brev open <NAME> -> open workspace in preferred editor
+	brev shell merge-json	# brev shell <NAME> -> ssh into workspace (shortcut)
+	ssh merge-json-wd6q	# ssh <SSH-NAME> -> ssh directly to workspace
+```
+
+##### Create a workspace from a git repository
+
+
+```
+$ brev start https://github.com/brevdev/react-starter-app
+```
+
+which has an output similar too:
+
+```
+Workspace is starting. This can take up to 2 minutes the first time.
+
+name react-starter-app
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+You can safely ctrl+c to exit
+⣾  workspace is deploying
+Your workspace is ready!
+
+Connect to the workspace:
+	brev open react-starter-app	# brev open <NAME> -> open workspace in preferred editor
+	brev shell react-starter-app	# brev shell <NAME> -> ssh into workspace (shortcut)
+	ssh react-starter-app-8v8p	# ssh <SSH-NAME> -> ssh directly to workspace
+
+```
+
+##### Join a workspace in your orginization
+
+view your orgs workspaces with `brev ls --all`. Workspaces in your org that you
+have not joined appear at the bottom of the output.
+
+```
+$ brev ls --all
+```
+
+which has an output similar too:
+
+```
+You have 1 workspace in Org brev.dev
+ NAME                             STATUS    URL                                                                       ID
+ brev-cli                         RUNNING   brev-cli-p09m-brevdev.wgt-us-west-2-test.brev.dev                         x1yxqp09m
+
+Connect to running workspace:
+	brev open brev-cli	# brev open <NAME> -> open workspace in preferred editor
+	brev shell brev-cli	# brev shell <NAME> -> ssh into workspace (shortcut)
+	ssh brev-cli-p09m	# ssh <SSH-NAME> -> ssh directly to workspace
+
+7 other projects in Org brev.dev
+ NAME                        MEMBERS
+ new-docs                          1
+ brev-landing-page                 2
+ todo-app                          1
+ vagrant-guide                     1
+ mern-template                     1
+ solidity-nextjs-starter           1
+ akka-http-quickstart-scala        1
+
+Join a project:
+	brev start new-docs
+
+```
+
+join the project new-docs
+
+```
+$ brev start new-docs
+```
+
+which has an output similar too:
+
+```
+Name flag omitted, using auto generated name: new-docs
+Workspace is starting. This can take up to 2 minutes the first time.
+
+name new-docs
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+You can safely ctrl+c to exit
+⣟  workspace is deploying Connect to the workspace:
+	brev open new-docs	# brev open <NAME> -> open workspace in preferred editor
+	brev shell new-docs	# brev shell <NAME> -> ssh into workspace (shortcut)
+	ssh new-docs-pek9	# ssh <SSH-NAME> -> ssh directly to workspace
+```
+
+##### Start a stopped workspace
+
+If you have already joined a workspace and have stopped it with `brev stop`,
+you can start it again with `brev start`
+
+view your current workspaces with `brev ls`
+
+```
+$ brev ls
+```
+
+which has an output similar too:
+
+```
+You have 1 workspace in Org brev.dev
+ NAME                             STATUS     URL                                                                       ID
+ linear-client                    STOPPED    linear-client-yw1a-brevdev.wgt-us-west-2-test.brev.dev                    gov5jyw1a
+
+Connect to running workspace:
+	brev open linear-client	# brev open <NAME> -> open workspace in preferred editor
+	brev shell linear-client	# brev shell <NAME> -> ssh into workspace (shortcut)
+	ssh linear-client-yw1a	# ssh <SSH-NAME> -> ssh directly to workspace
+
+```
+join the workspace
+```
+$ brev start linear-client
+```
+
+which has an output similar too:
+
+```
+Workspace linear-client is starting.
+Note: this can take about a minute. Run 'brev ls' to check status
+
+You can safely ctrl+c to exit
+```
+
 
 **Note: if you want to make multiple workspaces with the same git repo, use the --name flag with brev start**
 You can have multiple workspaces with the same git repo, however, each workspace must have a unique name.
