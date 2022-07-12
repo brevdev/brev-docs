@@ -63,14 +63,47 @@ Note: this can take a few seconds. Run 'brev ls' to check status
 ```
 
 #### run-tasks
-This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run `brev run-tasks`. If you'd like to make this a background process, add a `-d` to the end.
+##### Synopsis
 
 ```
-brev run-tasks -d
+    brev run-tasks -d
 ```
 
-This will have to be run every time you reboot unless you configure [autostart](/howto/configure-ssh-proxy-daemon-at-boot)
+##### Description
 
+In order for brev to connect to workspaces, there needs to be background daemons
+running to manage some things on your local machines environment. Currently, the
+one that is being launched by run-tasks is an ssh config file configuration
+daemon that periodically udpates a ssh config file with connection information
+in order to access you workspaces.
+
+This command has to be run at every boot, see [Configuring SSH Proxy Daemon at Boot](https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/) to
+configure this command to be run at boot.
+
+This command is set to be deprecated in favor of `brev configure`.
+
+##### Examples
+
+to run tasks in the background
+
+```
+$ brev run-tasks -d
+PID File: /home/f/.brev/task_daemon.pid
+Log File: /home/f/.brev/task_daemon.log
+```
+
+to run tasks in the foreground
+
+```
+$ brev run-tasks
+2022/07/11 15:28:44 creating new ssh config
+2022/07/11 15:28:48 creating new ssh config
+
+```
+
+##### See Also
+- [Configuring SSH Proxy Daemon at Boot](https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/)
+-TODO brev configure docs
 
 #### start
 
