@@ -326,6 +326,21 @@ brev stop workspace_name
 ```
 Everything in `/home/workspace` will be saved when it boots up again.
 
+stop multiple workspaces
+```
+$ brev stop brev-deploy naive-pubsub bar euler54 merge-json
+Workspace brev-deploy is stopping.
+Note: this can take a few seconds. Run 'brev ls' to check status
+Workspace naive-pubsub is stopping.
+Note: this can take a few seconds. Run 'brev ls' to check status
+Workspace bar is stopping.
+Note: this can take a few seconds. Run 'brev ls' to check status
+Workspace euler54 is stopping.
+Note: this can take a few seconds. Run 'brev ls' to check status
+Workspace merge-json is stopping.
+Note: this can take a few seconds. Run 'brev ls' to check status
+```
+
 ### Context Commands
 Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an `--active-org` flag for scripting purposes.
 
