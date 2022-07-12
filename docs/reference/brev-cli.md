@@ -44,7 +44,7 @@ This will have to be run every time you reboot unless you configure [autostart](
 #### start
 
 create start and join a workspace 
-#### Synopsis
+##### Synopsis
 
 ```
 
@@ -52,7 +52,7 @@ brev start { ARG | -e} {-n | --name} {-c | --class} { -s | --setup-script}
 	{-r | --setup-repo} {-p | --setup-path } { -o | --org}
 ```
 
-#### Description
+##### Description
 
 brev start can do the following:
 
@@ -62,7 +62,7 @@ brev start can do the following:
 - create a workspace from a directory on your computer 
 - create a workspace from a git url
 
-##### Start A Stopped Workspace 
+###### Start A Stopped Workspace 
 
 If you have a workspace in a stopped state, you can start it by using its id 
 or workspace name. If you have a workspace named `frontend` that you either 
@@ -74,13 +74,9 @@ $ brev start frontend
 
 to get find your workspace name or id, see [finding your workspace](howto/find-your-workspace). 
 
-##### Join a Workspace in an Organization
+##### Flags
 
-
-
-#### Flags
-
-##### -n --name <name>
+###### -n --name <name>
 
 specify the name for your workspace instead of brev-cli generating one for you.
 
@@ -93,8 +89,8 @@ $ brev start https://github.com/brevdev/brev-cli -n cli
 ```
 
 
-#### Examples
-##### Create an empty workspace
+##### Examples
+###### Create an empty workspace
 
 ```
 $ brev start -e -n foo
@@ -149,7 +145,7 @@ connect to the workspace:
 view your workspace with `brev ls`
 
 
-##### create a workspace, and do not block shell until workspace is created
+###### create a workspace, and do not block shell until workspace is created
 
 use the `-d` or `--detached` flag to create a workspace and immediately exit
 rather than wait for workspace to be successfully created before exiting.
@@ -168,7 +164,7 @@ workspace group brev-test-brevtenant-cluster
 Workspace is starting. This can take up to 2 minutes the first time.
 ```
 
-##### Create a workspace from a file path
+###### Create a workspace from a file path
 
 if in your current directory has a directory in it called `merge-json`, you can
 create a workspace using the contents of that directory using
@@ -203,7 +199,7 @@ Connect to the workspace:
 	ssh merge-json-wd6q	# ssh <SSH-NAME> -> ssh directly to workspace
 ```
 
-##### Create a workspace from a git repository
+###### Create a workspace from a git repository
 
 
 ```
@@ -230,7 +226,7 @@ Connect to the workspace:
 
 ```
 
-##### Join a workspace in your orginization
+###### Join a workspace in your orginization
 
 view your orgs workspaces with `brev ls --all`. Workspaces in your org that you
 have not joined appear at the bottom of the output.
@@ -289,7 +285,7 @@ You can safely ctrl+c to exit
 	ssh new-docs-pek9	# ssh <SSH-NAME> -> ssh directly to workspace
 ```
 
-##### Start a stopped workspace
+###### Start a stopped workspace
 
 If you have already joined a workspace and have stopped it with `brev stop`,
 you can start it again with `brev start`
