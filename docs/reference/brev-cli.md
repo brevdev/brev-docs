@@ -33,7 +33,7 @@ $ brev delete payments-frontend
 Deleting workspace payments-frontend. This can take a few minutes. Run 'brev ls' to check status
 ```
 
-####### Delete multiple workspaces
+###### Delete multiple workspaces
 
 ```
 $ brev delete bar euler54 naive-pubsub jupyter
