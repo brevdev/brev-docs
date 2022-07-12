@@ -29,7 +29,10 @@ Discussions:
 # HOW TO RUN THIS LOCALLY
 
 ## Run locally
-`mkdocs serve -a localhost:3003`
+
+```
+mkdocs serve -a localhost:3003
+```
 
 ## Deploy
 
