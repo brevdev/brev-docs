@@ -1,39 +1,44 @@
 # Brev CLI Reference
+
 The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.
 
 Every command has a `--help` flag if you need to see options.
 
-Brev CLI commands are broken up into 4 categories
-Workspace commands, Context commands, SSH commands, and Housekeeping commands.
+Brev CLI commands are broken up into 4 categories:
 
-### Workspace Commands
+ - Workspace commands
+ - Context commands
+ - SSH command
+ - Housekeeping commands.
 
-#### delete
+## Workspace Commands
+
+### delete
 
 Delete a Workspace by name or ID.
 
-##### Synopsis
+#### Synopsis
 
 ```
     brev delete [ Workspace Name or ID... ]
 ```
 
-##### Description
+#### Description
 
 Deleting a workspace will permanently delete a workspace from your account.
 This command will delete all content in the workspace and any volumes associated
 with the workspace. This command is not reversable and can result in lost work.
 
-##### Examples
+#### Examples
 
-###### Delete a workspace
+##### Delete a workspace
 
 ```
 $ brev delete payments-frontend
 Deleting workspace payments-frontend. This can take a few minutes. Run 'brev ls' to check status
 ```
 
-###### Delete multiple workspaces
+##### Delete multiple workspaces
 
 ```
 $ brev delete bar euler54 naive-pubsub jupyter
@@ -44,15 +49,15 @@ Deleting workspace jupyter. This can take a few minutes. Run 'brev ls' to check 
 
 ```
 
-#### reset
+### reset
 
-###### Description
+#### Description
  This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually.
 
 **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
 👆 This makes it really easy to change your environment without needing to commit the changes to main.**
 
-##### Example
+#### Example
 reset a workspace with the name `payments-frontend`
 
 ```
@@ -62,14 +67,14 @@ Note: this can take a few seconds. Run 'brev ls' to check status
 
 ```
 
-#### run-tasks
-##### Synopsis
+### run-tasks
+#### Synopsis
 
 ```
     brev run-tasks -d
 ```
 
-##### Description
+#### Description
 
 In order for brev to connect to workspaces, there needs to be background daemons
 running to manage some things on your local machines environment. Currently, the
@@ -82,7 +87,7 @@ configure this command to be run at boot.
 
 This command is set to be deprecated in favor of `brev configure`.
 
-##### Examples
+#### Examples
 
 to run tasks in the background
 
@@ -101,51 +106,39 @@ $ brev run-tasks
 
 ```
 
-##### See Also
+#### See Also
 - [Configuring SSH Proxy Daemon at Boot](https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/)
 -TODO brev configure docs
 
-#### start
+### start
 
-create start and join a workspace 
-##### Synopsis
+create start and join a workspace
+#### Synopsis
 
 ```
 
-brev start { ARG | -e} {-n | --name} {-c | --class} { -s | --setup-script} 
+brev start { ARG | -e} {-n | --name} {-c | --class} { -s | --setup-script}
 	{-r | --setup-repo} {-p | --setup-path } { -o | --org}
 ```
 
-##### Description
+#### Description
 
 brev start can do the following:
 
 - start a stopped workspace
 - join a workspace in an organization
 - create an empty workspace
-- create a workspace from a directory on your computer 
+- create a workspace from a directory on your computer
 - create a workspace from a git url
 
-###### Start A Stopped Workspace 
+#### Flags
 
-If you have a workspace in a stopped state, you can start it by using its id 
-or workspace name. If you have a workspace named `frontend` that you either 
-created or joined that is in a `STOPPED` state, you can start it again by running
-
-```
-$ brev start frontend
-```
-
-to get find your workspace name or id, see [finding your workspace](howto/find-your-workspace). 
-
-##### Flags
-
-###### -n --name <name>
+##### -n --name <name>
 
 specify the name for your workspace instead of brev-cli generating one for you.
 
-for example, to override the name of a workspace when creating a workspace from 
-a git repo you could do it with then `-n` flag. This example creates a repo with 
+for example, to override the name of a workspace when creating a workspace from
+a git repo you could do it with then `-n` flag. This example creates a repo with
 the name `cli` from the git repo `https://github.com/brevdev/brev-cli`.
 
 ```
@@ -153,8 +146,8 @@ $ brev start https://github.com/brevdev/brev-cli -n cli
 ```
 
 
-##### Examples
-###### Create an empty workspace
+#### Examples
+##### Create an empty workspace
 
 ```
 $ brev start -e -n foo
@@ -209,7 +202,7 @@ connect to the workspace:
 view your workspace with `brev ls`
 
 
-###### create a workspace, and do not block shell until workspace is created
+##### create a workspace, and do not block shell until workspace is created
 
 use the `-d` or `--detached` flag to create a workspace and immediately exit
 rather than wait for workspace to be successfully created before exiting.
@@ -228,7 +221,7 @@ workspace group brev-test-brevtenant-cluster
 Workspace is starting. This can take up to 2 minutes the first time.
 ```
 
-###### Create a workspace from a file path
+##### Create a workspace from a file path
 
 if in your current directory has a directory in it called `merge-json`, you can
 create a workspace using the contents of that directory using
@@ -263,7 +256,7 @@ Connect to the workspace:
 	ssh merge-json-wd6q	# ssh <SSH-NAME> -> ssh directly to workspace
 ```
 
-###### Create a workspace from a git repository
+##### Create a workspace from a git repository
 
 
 ```
@@ -290,7 +283,7 @@ Connect to the workspace:
 
 ```
 
-###### Join a workspace in your orginization
+##### Join a workspace in your orginization
 
 view your orgs workspaces with `brev ls --all`. Workspaces in your org that you
 have not joined appear at the bottom of the output.
@@ -349,7 +342,7 @@ You can safely ctrl+c to exit
 	ssh new-docs-pek9	# ssh <SSH-NAME> -> ssh directly to workspace
 ```
 
-###### Start a stopped workspace
+##### Start a stopped workspace
 
 If you have already joined a workspace and have stopped it with `brev stop`,
 you can start it again with `brev start`
@@ -391,7 +384,7 @@ You can safely ctrl+c to exit
 **Note: if you want to make multiple workspaces with the same git repo, use the --name flag with brev start**
 You can have multiple workspaces with the same git repo, however, each workspace must have a unique name.
 
-#### stop
+### stop
 If you don't plan on using your Brev workspace, you can temporarily pause it by running
 ```zsh
 brev stop workspace_name
@@ -413,10 +406,10 @@ Workspace merge-json is stopping.
 Note: this can take a few seconds. Run 'brev ls' to check status
 ```
 
-### Context Commands
+## Orginization Commands
 Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an `--active-org` flag for scripting purposes.
 
-#### ls
+### ls
 Print a tabular view of your workspaces or orgs
 
 ```zsh
@@ -430,16 +423,16 @@ brev ls
 brev ls --org org_name
 ```
 
-#### set
+### set
 Set the organization context for your commands.
 ```zsh
 brev set <org name>
 ```
 
-### SSH Commands
+## SSH Commands
 Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.
 
-#### port-forward
+### port-forward
 You can always access the localhost URL of your workspace via the [public url](/howto/find-my-localhost/), or you can port-forward your remote localhost to a local one.
 
 Run
@@ -456,9 +449,9 @@ This command runs interactive if the ports flag is left off.
 
 ![Screenshot](media/localpublic.png)
 
-### Housekeeping Commands
+## Housekeeping Commands
 
-#### jetbrains
+### jetbrains
 Jetbrains, unfortunately, doesn't use the standard SSH file, and instead uses a custom XML file. To establish a connection between your local computer and all of the workspaces in your organization, run:
 
 ```zsh
@@ -469,20 +462,20 @@ This command runs a helper proxy for jetbrains products that allows your jetbrai
 
 Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
 
-#### login
+### login
 Authenticate yourself with
 ```zsh
 brev login
 ```
 This will create an account if you don't already have one.
 
-#### logout
+### logout
 Remove your keys and logout
 ```zsh
 brev logout
 ```
 
-#### profile
+### profile
 If you have personal settings, such as aliases or shortcuts in your `~/.zshrc` or `~/.bash_profile`, you can sync them with Brev.dev to make sure every workspace you create has them.
 
 Create a git repo with setup script at `~.brev/setup.sh` or fork our example [here](https://github.com/brevdev/user-dotbrev). Once your setup is copied over, add it to your profile with
@@ -491,13 +484,13 @@ Create a git repo with setup script at `~.brev/setup.sh` or fork our example [he
 brev profile --set-personal-config _git_repo_url_
 ```
 
-#### refresh
+### refresh
 As a troubleshooting measure, you can force the cache to refresh if you suspect they're stale.
 ```zsh
 brev refresh
 ```
 
-#### secret
+### secret
 Use the encrypted secrets manager to load secret files and environment variables into your workspace, or set them for the entire org.
 
 Run the command in interactive mode by ommitting the flags
@@ -517,7 +510,7 @@ Ex: personal AWS credentials file
   brev secret --name AWS_KEY --value ... --type file --file-path --scope personal
 ```
 
-#### ssh-key
+### ssh-key
 Get your ssh keys to add to your git provider.
 ```zsh
 brev ssh-key

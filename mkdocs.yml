@@ -66,6 +66,7 @@ theme:
     - navigation.expand
     - content.tabs.link
 
+
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.tabbed
