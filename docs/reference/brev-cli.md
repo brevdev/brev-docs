@@ -362,6 +362,57 @@ Workspace merge-json is stopping.
 Note: this can take a few seconds. Run 'brev ls' to check status
 ```
 
+### port-forward
+
+#### Synopsis
+
+```
+	brev port-forward WS_NAME  [--port LOCAL_PORT:REMOTE_PORT]
+```
+
+#### Description
+
+port forward allows you to forward a port from a brev workspace to a port on
+your local machine.
+
+
+#### Examples
+
+##### Forward a port from a workspace to localhost
+port forward port 3333 on a workspace with the name `brev-docs` to port 3000 on your localhost
+
+```zsh
+$ brev port-forward brev-docs --port 3000:3333
+```
+
+which has an output similar to
+
+```
+2022/07/14 11:29:02 creating new ssh config
+portforwarding...
+localhost:3000 -> brev-docs-xp43:3333
+```
+
+##### Interactively port forward a workspace:
+
+To interacticely select which port to forward from a brev workspace to your
+localhost, run brev-port-forward with no flage
+
+```
+$ brev port-forward brev-docs
+
+Ports flag was omitted, running interactive mode!
+
+What port on your Brev machine would you like to forward? 3333
+What port should it be on your local machine? 3000
+
+-p 3000:3333
+2022/07/14 11:31:30 creating new ssh config
+portforwarding...
+localhost:3000 -> brev-docs-xp43:3333
+```
+
+#### See Also
 ## Context Commands
 Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an `--active-org` flag for scripting purposes.
 
@@ -385,25 +436,6 @@ Set the organization context for your commands.
 brev set <org name>
 ```
 
-## SSH Commands
-Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.
-
-### port-forward
-You can always access the localhost URL of your workspace via the [public url](/howto/find-my-localhost/), or you can port-forward your remote localhost to a local one.
-
-Run
-```zsh
-brev port-forward workspace_name --port localport:remoteport
-```
-
-For example, to run the brev docs on port 3000:
-```zsh
-brev port-forward brev-docs --port 3000:3000
-```
-
-This command runs interactive if the ports flag is left off.
-
-![Screenshot](media/localpublic.png)
 
 ## Housekeeping Commands
 
