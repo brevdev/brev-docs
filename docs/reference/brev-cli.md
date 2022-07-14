@@ -1,3 +1,4 @@
+<!--todo split into multiple docs -->
 # Brev CLI Reference
 
 The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.
@@ -396,7 +397,7 @@ localhost:3000 -> brev-docs-xp43:3333
 ##### Interactively port forward a workspace:
 
 To interacticely select which port to forward from a brev workspace to your
-localhost, run brev-port-forward with no flage
+localhost, run brev-port-forward with no flag
 
 ```
 $ brev port-forward brev-docs
@@ -451,12 +452,35 @@ This command runs a helper proxy for jetbrains products that allows your jetbrai
 Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
 
 ### login
-Authenticate yourself with
-```zsh
-brev login
-```
-This will create an account if you don't already have one.
 
+
+#### Synopsis
+```
+	brev login [--token] [--skip-browser]
+```
+#### Description
+
+This function log's you in to your brev account, and preforms some actions that
+brev needs to function with you user account such as set up config files and
+
+
+<!--todo  explain this a little clearer -->
+- creates `~/.brev/` directory if it does not exist
+- if you don't have an account on brev, the browser step will create one for you
+- on first run asks you onboarding questions
+- on first run asks you to configure ssh keys
+- creates your first org if one does not exist
+- imports your ide config for your workspaces <!-- todo needs elaboration>
+- runs `brev run-tasks -d` <!-- todo link to doc page >
+
+#### Flags
+#### Examples
+
+```
+$ brev login
+```
+#### See Also
+<!-- todo link to logout page -->
 ### logout
 Remove your keys and logout
 ```zsh

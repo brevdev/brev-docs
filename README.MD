@@ -25,6 +25,15 @@ Discussions:
 - [ ] Add the page to the sidebar in mkdocs.yml, otherwise no one will find it.
 - [ ] In the index.md for the section's folder, add a couple lines
 
+## nice snippet for populating reference docs
+
+```md
+#### Synopsis
+#### Description
+#### Flags
+#### Examples
+#### See Also
+```
 
 # HOW TO RUN THIS LOCALLY
 
