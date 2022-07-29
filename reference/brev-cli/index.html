@@ -147,7 +147,7 @@
       
       
       <link rel="icon" href="../../favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.3.9">
     
     
       
@@ -155,11 +155,12 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.3de6f41f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d29e8d0.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
+      
       
     
     
@@ -205,7 +206,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#brev-cli" class="md-skip">
+        <a href="#brev-cli-reference" class="md-skip">
           Skip to content
         </a>
       
@@ -325,7 +326,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
@@ -642,21 +643,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brev-cli-reference" class="md-nav__link">
-    Brev CLI Reference
-  </a>
-  
-    <nav class="md-nav" aria-label="Brev CLI Reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#workspace-commands" class="md-nav__link">
     Workspace Commands
   </a>
@@ -669,6 +655,53 @@
     delete
   </a>
   
+    <nav class="md-nav" aria-label="delete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-workspace" class="md-nav__link">
+    Delete a workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-multiple-workspaces" class="md-nav__link">
+    Delete multiple workspaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -676,25 +709,19 @@
     reset
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="reset">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#run-tasks" class="md-nav__link">
-    run-tasks
+  <a href="#description_1" class="md-nav__link">
+    Description
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#start" class="md-nav__link">
-    start
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop" class="md-nav__link">
-    stop
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -705,6 +732,181 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    start
+  </a>
+  
+    <nav class="md-nav" aria-label="start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_1" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags
+  </a>
+  
+    <nav class="md-nav" aria-label="Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-n-name" class="md-nav__link">
+    -n --name 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-empty-workspace" class="md-nav__link">
+    Create an empty workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workspace-and-do-not-block-shell-until-workspace-is-created" class="md-nav__link">
+    create a workspace, and do not block shell until workspace is created
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workspace-from-a-file-path" class="md-nav__link">
+    Create a workspace from a file path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workspace-from-a-git-repository" class="md-nav__link">
+    Create a workspace from a git repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-a-workspace-in-your-orginization" class="md-nav__link">
+    Join a workspace in your orginization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-a-stopped-workspace" class="md-nav__link">
+    Start a stopped workspace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forward" class="md-nav__link">
+    port-forward
+  </a>
+  
+    <nav class="md-nav" aria-label="port-forward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_2" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forward-a-port-from-a-workspace-to-localhost" class="md-nav__link">
+    Forward a port from a workspace to localhost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactively-port-forward-a-workspace" class="md-nav__link">
+    Interactively port forward a workspace:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See Also
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#context-commands" class="md-nav__link">
     Context Commands
   </a>
@@ -730,28 +932,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-commands" class="md-nav__link">
-    SSH Commands
-  </a>
-  
-    <nav class="md-nav" aria-label="SSH Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#port-forward" class="md-nav__link">
-    port-forward
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#housekeeping-commands" class="md-nav__link">
     Housekeeping Commands
   </a>
@@ -770,6 +952,47 @@
   <a href="#login" class="md-nav__link">
     login
   </a>
+  
+    <nav class="md-nav" aria-label="login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_3" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags_1" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also_1" class="md-nav__link">
+    See Also
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -804,6 +1027,42 @@
           <li class="md-nav__item">
   <a href="#ssh-key" class="md-nav__link">
     ssh-key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-tasks" class="md-nav__link">
+    run-tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="run-tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_4" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also_2" class="md-nav__link">
+    See Also
   </a>
   
 </li>
@@ -874,21 +1133,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#brev-cli-reference" class="md-nav__link">
-    Brev CLI Reference
-  </a>
-  
-    <nav class="md-nav" aria-label="Brev CLI Reference">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#workspace-commands" class="md-nav__link">
     Workspace Commands
   </a>
@@ -901,6 +1145,53 @@
     delete
   </a>
   
+    <nav class="md-nav" aria-label="delete">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#delete-a-workspace" class="md-nav__link">
+    Delete a workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-multiple-workspaces" class="md-nav__link">
+    Delete multiple workspaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -908,25 +1199,19 @@
     reset
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="reset">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#run-tasks" class="md-nav__link">
-    run-tasks
+  <a href="#description_1" class="md-nav__link">
+    Description
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#start" class="md-nav__link">
-    start
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#stop" class="md-nav__link">
-    stop
+  <a href="#example" class="md-nav__link">
+    Example
   </a>
   
 </li>
@@ -937,6 +1222,181 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#start" class="md-nav__link">
+    start
+  </a>
+  
+    <nav class="md-nav" aria-label="start">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_1" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_2" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    Flags
+  </a>
+  
+    <nav class="md-nav" aria-label="Flags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-n-name" class="md-nav__link">
+    -n --name 
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-empty-workspace" class="md-nav__link">
+    Create an empty workspace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workspace-and-do-not-block-shell-until-workspace-is-created" class="md-nav__link">
+    create a workspace, and do not block shell until workspace is created
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workspace-from-a-file-path" class="md-nav__link">
+    Create a workspace from a file path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-workspace-from-a-git-repository" class="md-nav__link">
+    Create a workspace from a git repository
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#join-a-workspace-in-your-orginization" class="md-nav__link">
+    Join a workspace in your orginization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-a-stopped-workspace" class="md-nav__link">
+    Start a stopped workspace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop" class="md-nav__link">
+    stop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-forward" class="md-nav__link">
+    port-forward
+  </a>
+  
+    <nav class="md-nav" aria-label="port-forward">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_2" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_3" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forward-a-port-from-a-workspace-to-localhost" class="md-nav__link">
+    Forward a port from a workspace to localhost
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactively-port-forward-a-workspace" class="md-nav__link">
+    Interactively port forward a workspace:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See Also
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#context-commands" class="md-nav__link">
     Context Commands
   </a>
@@ -962,28 +1422,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-commands" class="md-nav__link">
-    SSH Commands
-  </a>
-  
-    <nav class="md-nav" aria-label="SSH Commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#port-forward" class="md-nav__link">
-    port-forward
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#housekeeping-commands" class="md-nav__link">
     Housekeeping Commands
   </a>
@@ -1002,6 +1442,47 @@
   <a href="#login" class="md-nav__link">
     login
   </a>
+  
+    <nav class="md-nav" aria-label="login">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_3" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_4" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags_1" class="md-nav__link">
+    Flags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_3" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also_1" class="md-nav__link">
+    See Also
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1040,6 +1521,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#run-tasks" class="md-nav__link">
+    run-tasks
+  </a>
+  
+    <nav class="md-nav" aria-label="run-tasks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#synopsis_4" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description_5" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples_4" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-also_2" class="md-nav__link">
+    See Also
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1064,74 +1581,295 @@
                 
 
 
-<h1 id="brev-cli">Brev CLI</h1>
+<!--todo split into multiple docs -->
+<h1 id="brev-cli-reference">Brev CLI Reference</h1>
 <p>The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.</p>
 <p>Every command has a <code>--help</code> flag if you need to see options.</p>
-<h2 id="getting-started">Getting Started</h2>
-<ol>
-<li>
-<p>Start by downloading the CLI:
-if brew is not already installed on your computer install it with
-<div class="highlight"><pre><span></span><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+<p>Brev CLI commands are broken up into 4 categories:</p>
+<ul>
+<li>Workspace commands</li>
+<li>Context commands</li>
+<li>SSH command</li>
+<li>Housekeeping commands.</li>
+</ul>
+<h2 id="workspace-commands">Workspace Commands</h2>
+<h3 id="delete">delete</h3>
+<p>Delete a Workspace by name or ID.</p>
+<h4 id="synopsis">Synopsis</h4>
+<div class="highlight"><pre><span></span><code>    brev delete [ Workspace Name or ID... ]
 </code></pre></div>
-then add Brev's tap and install <code>brev</code> with
-<div class="highlight"><pre><span></span><code>brew install brevdev/homebrew-brev/brev
-</code></pre></div></p>
-</li>
-<li>
-<p>Run <code>brev login</code>. If you don't already have an account, this will create one and prompt you to create an SSH key.
-  <strong>Your account must be verified to create a workspace. You can verify by putting a credit card on file (we'll never charge you without your permission) or just message us in the <a href="https://discord.gg/NVDyv7TUgJ">Discord</a>.</strong></p>
-</li>
-<li>
-<p>Use the <code>start</code> command to create your first workspace. <em>Note, running this the first time might take a few minutes. We're aware of this issue and are working on it.</em>
-<div class="highlight"><pre><span></span><code>brev start &lt;git_url&gt;
-</code></pre></div></p>
-</li>
-<li>
-<p>Configure brev to <a href="/howto/configure-ssh-proxy-daemon-at-boot/">autostart ssh proxy daemon</a>
-If you run into any issues, run <code>brev refresh</code>.</p>
-</li>
-</ol>
-<p>Not sure what your workspace is called? Try <code>brev ls</code>.</p>
-<p>Wrong organization? Try <code>brev ls orgs</code> and then <code>brev set &lt;org_name&gt;</code>.</p>
-<p>View the full CLI docs below, and reach out to us in the <a href="https://discord.gg/NVDyv7TUgJ">Discord</a> for help! We're here for anything you need. Build something great 🤙</p>
-<h2 id="brev-cli-reference">Brev CLI Reference</h2>
-<p>Brev CLI commands are broken up into 4 categories
-Workspace commands, Context commands, SSH commands, and Housekeeping commands.</p>
-<h3 id="workspace-commands">Workspace Commands</h3>
-<h4 id="delete">delete</h4>
-<p>If you no longer need a machine, and you'd like an action more permanent than <a href="/reference/brev-cli/#stop">stop</a>, you can delete the workspace.</p>
-<p><code>brev delete workspace_name</code></p>
-<h4 id="reset">reset</h4>
-<p>If you're experiencing any machine problems, including self-inflicted ones like installing conflicting or incorrect software versions, rather than wasting time debugging, just bite the bullet. This command deletes your machine and gets you a fresh one. Make sure to have a <a href="/reference/dot-brev-setup-script/">.brev setup script</a> or you'll have to reinstall everythign manually. </p>
+<h4 id="description">Description</h4>
+<p>Deleting a workspace will permanently delete a workspace from your account.
+This command will delete all content in the workspace and any volumes associated
+with the workspace. This command is not reversable and can result in lost work.</p>
+<h4 id="examples">Examples</h4>
+<h5 id="delete-a-workspace">Delete a workspace</h5>
+<div class="highlight"><pre><span></span><code>$ brev delete payments-frontend
+Deleting workspace payments-frontend. This can take a few minutes. Run &#39;brev ls&#39; to check status
+</code></pre></div>
+<h5 id="delete-multiple-workspaces">Delete multiple workspaces</h5>
+<div class="highlight"><pre><span></span><code>$ brev delete bar euler54 naive-pubsub jupyter
+Deleting workspace bar. This can take a few minutes. Run &#39;brev ls&#39; to check status
+Deleting workspace euler54. This can take a few minutes. Run &#39;brev ls&#39; to check status
+Deleting workspace naive-pubsub. This can take a few minutes. Run &#39;brev ls&#39; to check status
+Deleting workspace jupyter. This can take a few minutes. Run &#39;brev ls&#39; to check status
+</code></pre></div>
+<h3 id="reset">reset</h3>
+<h4 id="description_1">Description</h4>
+<p>This command deletes your machine and gets you a fresh one. Make sure to have a <a href="/reference/dot-brev-setup-script/">.brev setup script</a> or you'll have to reinstall everythign manually.</p>
 <p><strong>Note: even if not committed, the <code>.brev/setup.sh</code> script will persist because everythign in <code>/home/workspace</code> will be saved.
 👆 This makes it really easy to change your environment without needing to commit the changes to main.</strong></p>
-<h4 id="run-tasks">run-tasks</h4>
-<p>This starts the brev daemon. This should be automatically running in the background. This daemon manages the connection between your local computer and each of your remote machines. If you'd like to manually start brev, simply run <code>brev run-tasks</code>. If you'd like to make this a background process, add a <code>-d</code> to the end.</p>
-<div class="highlight"><pre><span></span><code>brev run-tasks -d
+<h4 id="example">Example</h4>
+<p>reset a workspace with the name <code>payments-frontend</code></p>
+<div class="highlight"><pre><span></span><code>$ brev reset payments-frontend
+Workspace payments-frontend is resetting.
+Note: this can take a few seconds. Run &#39;brev ls&#39; to check status
 </code></pre></div>
-<p>This will have to be run every time you reboot unless you configure <a href="/howto/configure-ssh-proxy-daemon-at-boot">autostart</a></p>
-<h4 id="start">start</h4>
-<p>Create a new workspace from a git URL or to start a stopped workspace.</p>
-<p>Supplying a git url,
-<div class="highlight"><pre><span></span><code>brev start git_url
+<h3 id="start">start</h3>
+<p>create start and join a workspace</p>
+<h4 id="synopsis_1">Synopsis</h4>
+<div class="highlight"><pre><span></span><code>brev start { ARG | -e} {-n | --name} {-c | --class} { -s | --setup-script}
+    {-r | --setup-repo} {-p | --setup-path } { -o | --org}
 </code></pre></div>
- will create a new workspace with the git url cloned. Create a <a href="/reference/dot-brev-setup-script/">.brev directory</a> and anyone can get their own workspace that comes configured for immediate development.</p>
-<p>When viewed from the web dashboard, workspaces within an org become projects, allowing your organization's members to get their own cloned workspace with one click.</p>
-<p>If you have a Brev workspace in a stopped state, run
-<div class="highlight"><pre><span></span><code>brev start workspace_name
+<h4 id="description_2">Description</h4>
+<p>brev start can do the following:</p>
+<ul>
+<li>start a stopped workspace</li>
+<li>join a workspace in an organization</li>
+<li>create an empty workspace</li>
+<li>create a workspace from a directory on your computer</li>
+<li>create a workspace from a git url</li>
+</ul>
+<h4 id="flags">Flags</h4>
+<h5 id="-n-name">-n --name <name></h5>
+<p>specify the name for your workspace instead of brev-cli generating one for you.</p>
+<p>for example, to override the name of a workspace when creating a workspace from
+a git repo you could do it with then <code>-n</code> flag. This example creates a repo with
+the name <code>cli</code> from the git repo <code>https://github.com/brevdev/brev-cli</code>.</p>
+<div class="highlight"><pre><span></span><code>$ brev start https://github.com/brevdev/brev-cli -n cli
 </code></pre></div>
-to start it up again. Note, this might take a minute or two.</p>
+<h4 id="examples_1">Examples</h4>
+<h5 id="create-an-empty-workspace">Create an empty workspace</h5>
+<div class="highlight"><pre><span></span><code>$ brev start -e -n foo
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>name foo
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+workspace is starting. this can take up to 2 minutes the first time.
+
+you can safely ctrl+c to exit
+⣽  workspace is deploying
+your workspace is ready!
+
+connect to the workspace:
+    brev open foo   # brev open &lt;name&gt; -&gt; open workspace in preferred editor
+    brev shell foo  # brev shell &lt;name&gt; -&gt; ssh into workspace (shortcut)
+    ssh foo-8j4u    # ssh &lt;ssh-name&gt; -&gt; ssh directly to workspace
+</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><code>$ brev start --empty --name foo
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>name foo
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+workspace is starting. this can take up to 2 minutes the first time.
+
+you can safely ctrl+c to exit
+⣽  workspace is deploying
+your workspace is ready!
+
+connect to the workspace:
+    brev open foo   # brev open &lt;name&gt; -&gt; open workspace in preferred editor
+    brev shell foo  # brev shell &lt;name&gt; -&gt; ssh into workspace (shortcut)
+    ssh foo-8j4u    # ssh &lt;ssh-name&gt; -&gt; ssh directly to workspace
+</code></pre></div>
+<p>view your workspace with <code>brev ls</code></p>
+<h5 id="create-a-workspace-and-do-not-block-shell-until-workspace-is-created">create a workspace, and do not block shell until workspace is created</h5>
+<p>use the <code>-d</code> or <code>--detached</code> flag to create a workspace and immediately exit
+rather than wait for workspace to be successfully created before exiting.</p>
+<div class="highlight"><pre><span></span><code>$ brev start -d -e -n bar
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>name bar
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+Workspace is starting. This can take up to 2 minutes the first time.
+</code></pre></div>
+<h5 id="create-a-workspace-from-a-file-path">Create a workspace from a file path</h5>
+<p>if in your current directory has a directory in it called <code>merge-json</code>, you can
+create a workspace using the contents of that directory using
+<code>brev start merge-json</code></p>
+<div class="highlight"><pre><span></span><code>$ ls
+merge-json
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>$ brev start merge-json
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>Workspace is starting. This can take up to 2 minutes the first time.
+
+name merge-json
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+You can safely ctrl+c to exit
+⡿  workspace is deploying
+Your workspace is ready!
+
+Connect to the workspace:
+    brev open merge-json    # brev open &lt;NAME&gt; -&gt; open workspace in preferred editor
+    brev shell merge-json   # brev shell &lt;NAME&gt; -&gt; ssh into workspace (shortcut)
+    ssh merge-json-wd6q # ssh &lt;SSH-NAME&gt; -&gt; ssh directly to workspace
+</code></pre></div>
+<h5 id="create-a-workspace-from-a-git-repository">Create a workspace from a git repository</h5>
+<div class="highlight"><pre><span></span><code>$ brev start https://github.com/brevdev/react-starter-app
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>Workspace is starting. This can take up to 2 minutes the first time.
+
+name react-starter-app
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+You can safely ctrl+c to exit
+⣾  workspace is deploying
+Your workspace is ready!
+
+Connect to the workspace:
+    brev open react-starter-app # brev open &lt;NAME&gt; -&gt; open workspace in preferred editor
+    brev shell react-starter-app    # brev shell &lt;NAME&gt; -&gt; ssh into workspace (shortcut)
+    ssh react-starter-app-8v8p  # ssh &lt;SSH-NAME&gt; -&gt; ssh directly to workspace
+</code></pre></div>
+<h5 id="join-a-workspace-in-your-orginization">Join a workspace in your orginization</h5>
+<p>view your orgs workspaces with <code>brev ls --all</code>. Workspaces in your org that you
+have not joined appear at the bottom of the output.</p>
+<div class="highlight"><pre><span></span><code>$ brev ls --all
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>You have 1 workspace in Org brev.dev
+ NAME                             STATUS    URL                                                                       ID
+ brev-cli                         RUNNING   brev-cli-p09m-brevdev.wgt-us-west-2-test.brev.dev                         x1yxqp09m
+
+Connect to running workspace:
+    brev open brev-cli  # brev open &lt;NAME&gt; -&gt; open workspace in preferred editor
+    brev shell brev-cli # brev shell &lt;NAME&gt; -&gt; ssh into workspace (shortcut)
+    ssh brev-cli-p09m   # ssh &lt;SSH-NAME&gt; -&gt; ssh directly to workspace
+
+7 other projects in Org brev.dev
+ NAME                        MEMBERS
+ new-docs                          1
+ brev-landing-page                 2
+ todo-app                          1
+ vagrant-guide                     1
+ mern-template                     1
+ solidity-nextjs-starter           1
+ akka-http-quickstart-scala        1
+
+Join a project:
+    brev start new-docs
+</code></pre></div>
+<p>join the project new-docs</p>
+<div class="highlight"><pre><span></span><code>$ brev start new-docs
+</code></pre></div>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>Name flag omitted, using auto generated name: new-docs
+Workspace is starting. This can take up to 2 minutes the first time.
+
+name new-docs
+template 4nbb4lg2s ubuntu
+resource class 2x8
+workspace group brev-test-brevtenant-cluster
+You can safely ctrl+c to exit
+⣟  workspace is deploying Connect to the workspace:
+    brev open new-docs  # brev open &lt;NAME&gt; -&gt; open workspace in preferred editor
+    brev shell new-docs # brev shell &lt;NAME&gt; -&gt; ssh into workspace (shortcut)
+    ssh new-docs-pek9   # ssh &lt;SSH-NAME&gt; -&gt; ssh directly to workspace
+</code></pre></div>
+<h5 id="start-a-stopped-workspace">Start a stopped workspace</h5>
+<p>If you have already joined a workspace and have stopped it with <code>brev stop</code>,
+you can start it again with <code>brev start</code></p>
+<p>view your current workspaces with <code>brev ls</code></p>
+<div class="highlight"><pre><span></span><code>$ brev ls
+</code></pre></div>
+<p>which has an output similar too:</p>
+<p><div class="highlight"><pre><span></span><code>You have 1 workspace in Org brev.dev
+ NAME                             STATUS     URL                                                                       ID
+ linear-client                    STOPPED    linear-client-yw1a-brevdev.wgt-us-west-2-test.brev.dev                    gov5jyw1a
+
+Connect to running workspace:
+    brev open linear-client # brev open &lt;NAME&gt; -&gt; open workspace in preferred editor
+    brev shell linear-client    # brev shell &lt;NAME&gt; -&gt; ssh into workspace (shortcut)
+    ssh linear-client-yw1a  # ssh &lt;SSH-NAME&gt; -&gt; ssh directly to workspace
+</code></pre></div>
+join the workspace
+<div class="highlight"><pre><span></span><code>$ brev start linear-client
+</code></pre></div></p>
+<p>which has an output similar too:</p>
+<div class="highlight"><pre><span></span><code>Workspace linear-client is starting.
+Note: this can take about a minute. Run &#39;brev ls&#39; to check status
+
+You can safely ctrl+c to exit
+</code></pre></div>
 <p><strong>Note: if you want to make multiple workspaces with the same git repo, use the --name flag with brev start</strong>
 You can have multiple workspaces with the same git repo, however, each workspace must have a unique name.</p>
-<h4 id="stop">stop</h4>
+<h3 id="stop">stop</h3>
 <p>If you don't plan on using your Brev workspace, you can temporarily pause it by running
 <div class="highlight"><pre><span></span><code>brev stop workspace_name
 </code></pre></div>
 Everything in <code>/home/workspace</code> will be saved when it boots up again.</p>
-<h3 id="context-commands">Context Commands</h3>
+<p>stop multiple workspaces
+<div class="highlight"><pre><span></span><code>$ brev stop brev-deploy naive-pubsub bar euler54 merge-json
+Workspace brev-deploy is stopping.
+Note: this can take a few seconds. Run &#39;brev ls&#39; to check status
+Workspace naive-pubsub is stopping.
+Note: this can take a few seconds. Run &#39;brev ls&#39; to check status
+Workspace bar is stopping.
+Note: this can take a few seconds. Run &#39;brev ls&#39; to check status
+Workspace euler54 is stopping.
+Note: this can take a few seconds. Run &#39;brev ls&#39; to check status
+Workspace merge-json is stopping.
+Note: this can take a few seconds. Run &#39;brev ls&#39; to check status
+</code></pre></div></p>
+<h3 id="port-forward">port-forward</h3>
+<h4 id="synopsis_2">Synopsis</h4>
+<div class="highlight"><pre><span></span><code>    brev port-forward WS_NAME  [--port LOCAL_PORT:REMOTE_PORT]
+</code></pre></div>
+<h4 id="description_3">Description</h4>
+<p>port forward allows you to forward a port from a brev workspace to a port on
+your local machine.</p>
+<h4 id="examples_2">Examples</h4>
+<h5 id="forward-a-port-from-a-workspace-to-localhost">Forward a port from a workspace to localhost</h5>
+<p>port forward port 3333 on a workspace with the name <code>brev-docs</code> to port 3000 on your localhost</p>
+<div class="highlight"><pre><span></span><code>$ brev port-forward brev-docs --port <span class="m">3000</span>:3333
+</code></pre></div>
+<p>which has an output similar to</p>
+<div class="highlight"><pre><span></span><code>2022/07/14 11:29:02 creating new ssh config
+portforwarding...
+localhost:3000 -&gt; brev-docs-xp43:3333
+</code></pre></div>
+<h5 id="interactively-port-forward-a-workspace">Interactively port forward a workspace:</h5>
+<p>To interacticely select which port to forward from a brev workspace to your
+localhost, run brev-port-forward with no flag</p>
+<div class="highlight"><pre><span></span><code>$ brev port-forward brev-docs
+
+Ports flag was omitted, running interactive mode!
+
+What port on your Brev machine would you like to forward? 3333
+What port should it be on your local machine? 3000
+
+-p 3000:3333
+2022/07/14 11:31:30 creating new ssh config
+portforwarding...
+localhost:3000 -&gt; brev-docs-xp43:3333
+</code></pre></div>
+<h4 id="see-also">See Also</h4>
+<h2 id="context-commands">Context Commands</h2>
 <p>Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an <code>--active-org</code> flag for scripting purposes.</p>
-<h4 id="ls">ls</h4>
+<h3 id="ls">ls</h3>
 <p>Print a tabular view of your workspaces or orgs</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># print orgs</span>
 brev ls orgs
@@ -1142,48 +1880,54 @@ brev ls
 <span class="c1"># print workspaces within any organization</span>
 brev ls --org org_name
 </code></pre></div>
-<h4 id="set">set</h4>
+<h3 id="set">set</h3>
 <p>Set the organization context for your commands.
 <div class="highlight"><pre><span></span><code>brev <span class="nb">set</span> &lt;org name&gt;
 </code></pre></div></p>
-<h3 id="ssh-commands">SSH Commands</h3>
-<p>Brev aims to be as invisible as possible, letting developers code locally with the benefits of cloud compute. The commands in this section will evolve to happen in the background as much as makes sense.</p>
-<h4 id="port-forward">port-forward</h4>
-<p>You can always access the localhost URL of your workspace via the <a href="/howto/find-my-localhost/">public url</a>, or you can port-forward your remote localhost to a local one.</p>
-<p>Run
-<div class="highlight"><pre><span></span><code>brev port-forward workspace_name --port localport:remoteport
-</code></pre></div></p>
-<p>For example, to run the brev docs on port 3000:
-<div class="highlight"><pre><span></span><code>brev port-forward brev-docs --port <span class="m">3000</span>:3000
-</code></pre></div></p>
-<p>This command runs interactive if the ports flag is left off.</p>
-<p><img alt="Screenshot" src="../media/localpublic.png" /></p>
-<h3 id="housekeeping-commands">Housekeeping Commands</h3>
-<h4 id="jetbrains">jetbrains</h4>
+<h2 id="housekeeping-commands">Housekeeping Commands</h2>
+<h3 id="jetbrains">jetbrains</h3>
 <p>Jetbrains, unfortunately, doesn't use the standard SSH file, and instead uses a custom XML file. To establish a connection between your local computer and all of the workspaces in your organization, run:</p>
 <div class="highlight"><pre><span></span><code>brev jetbrains
 </code></pre></div>
 <p>This command runs a helper proxy for jetbrains products that allows your jetbrains IDEs ssh access. It does <em>not</em> update if new workspaces are created or deleted, so please stop the process and re-run it to update it.</p>
 <p>Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run <code>brev jetbrains</code>.</p>
-<h4 id="login">login</h4>
-<p>Authenticate yourself with
-<div class="highlight"><pre><span></span><code>brev login
+<h3 id="login">login</h3>
+<h4 id="synopsis_3">Synopsis</h4>
+<div class="highlight"><pre><span></span><code>    brev login [--token] [--skip-browser]
 </code></pre></div>
-This will create an account if you don't already have one.</p>
-<h4 id="logout">logout</h4>
+<h4 id="description_4">Description</h4>
+<p>This function log's you in to your brev account, and preforms some actions that
+brev needs to function with you user account such as set up config files and</p>
+<!--todo  explain this a little clearer -->
+<ul>
+<li>creates <code>~/.brev/</code> directory if it does not exist</li>
+<li>if you don't have an account on brev, the browser step will create one for you</li>
+<li>on first run asks you onboarding questions</li>
+<li>on first run asks you to configure ssh keys</li>
+<li>creates your first org if one does not exist</li>
+<li>imports your ide config for your workspaces &lt;!-- todo needs elaboration&gt;</li>
+<li>runs <code>brev run-tasks -d</code> &lt;!-- todo link to doc page &gt;</li>
+</ul>
+<h4 id="flags_1">Flags</h4>
+<h4 id="examples_3">Examples</h4>
+<div class="highlight"><pre><span></span><code>$ brev login
+</code></pre></div>
+<h4 id="see-also_1">See Also</h4>
+<!-- todo link to logout page -->
+<h3 id="logout">logout</h3>
 <p>Remove your keys and logout
 <div class="highlight"><pre><span></span><code>brev <span class="nb">logout</span>
 </code></pre></div></p>
-<h4 id="profile">profile</h4>
+<h3 id="profile">profile</h3>
 <p>If you have personal settings, such as aliases or shortcuts in your <code>~/.zshrc</code> or <code>~/.bash_profile</code>, you can sync them with Brev.dev to make sure every workspace you create has them.</p>
 <p>Create a git repo with setup script at <code>~.brev/setup.sh</code> or fork our example <a href="https://github.com/brevdev/user-dotbrev">here</a>. Once your setup is copied over, add it to your profile with</p>
 <div class="highlight"><pre><span></span><code>brev profile --set-personal-config _git_repo_url_
 </code></pre></div>
-<h4 id="refresh">refresh</h4>
+<h3 id="refresh">refresh</h3>
 <p>As a troubleshooting measure, you can force the cache to refresh if you suspect they're stale.
 <div class="highlight"><pre><span></span><code>brev refresh
 </code></pre></div></p>
-<h4 id="secret">secret</h4>
+<h3 id="secret">secret</h3>
 <p>Use the encrypted secrets manager to load secret files and environment variables into your workspace, or set them for the entire org.</p>
 <p>Run the command in interactive mode by ommitting the flags
 <div class="highlight"><pre><span></span><code>brev secret
@@ -1195,14 +1939,46 @@ This will create an account if you don't already have one.</p>
 <p>Ex: personal AWS credentials file
 <div class="highlight"><pre><span></span><code>  brev secret --name AWS_KEY --value ... --type file --file-path --scope personal
 </code></pre></div></p>
-<h4 id="ssh-key">ssh-key</h4>
+<h3 id="ssh-key">ssh-key</h3>
 <p>Get your ssh keys to add to your git provider.
 <div class="highlight"><pre><span></span><code>brev ssh-key
 </code></pre></div>
 Quick links to add it to <a href="https://github.com/settings/keys">Github</a> or <a href="https://gitlab.com/-/profile/keys">Gitlab</a></p>
+<h3 id="run-tasks">run-tasks</h3>
+<h4 id="synopsis_4">Synopsis</h4>
+<div class="highlight"><pre><span></span><code>    brev run-tasks -d
+</code></pre></div>
+<h4 id="description_5">Description</h4>
+<p>In order for brev to connect to workspaces, there needs to be background daemons
+running to manage some things on your local machines environment. Currently, the
+one that is being launched by run-tasks is an ssh config file configuration
+daemon that periodically udpates a ssh config file with connection information
+in order to access you workspaces.</p>
+<p>This command has to be run at every boot, see <a href="https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/">Configuring SSH Proxy Daemon at Boot</a> to
+configure this command to be run at boot.</p>
+<p>This command is set to be deprecated in favor of <code>brev configure</code>.</p>
+<h4 id="examples_4">Examples</h4>
+<p>to run tasks in the background</p>
+<div class="highlight"><pre><span></span><code>$ brev run-tasks -d
+PID File: /home/f/.brev/task_daemon.pid
+Log File: /home/f/.brev/task_daemon.log
+</code></pre></div>
+<p>to run tasks in the foreground</p>
+<div class="highlight"><pre><span></span><code>$ brev run-tasks
+2022/07/11 15:28:44 creating new ssh config
+2022/07/11 15:28:48 creating new ssh config
+</code></pre></div>
+<h4 id="see-also_2">See Also</h4>
+<ul>
+<li><a href="https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/">Configuring SSH Proxy Daemon at Boot</a>
+-TODO brev configure docs</li>
+</ul>
 
               
             </article>
+            
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
           </div>
         </div>
         
@@ -1210,7 +1986,8 @@ Quick links to add it to <a href="https://github.com/settings/keys">Github</a> o
       
         <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
         <a href="../dot-brev-setup-script/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Setup Scripts (.brev)" rel="prev">
@@ -1300,10 +2077,12 @@ Quick links to add it to <a href="https://github.com/settings/keys">Github</a> o
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.b97dbffb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c2e1ee47.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c7ad80a.min.js"></script>
+      
+        <script src="../../js/fullstory.js"></script>
       
     
   </body>
