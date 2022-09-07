@@ -151,7 +151,7 @@
     
     
       
-        <title>Debugging - Brev Dev Docs</title>
+        <title>GPU Dev Environments - Brev Dev Docs</title>
       
     
     
@@ -206,7 +206,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#brev-debugging" class="md-skip">
+        <a href="#brev-for-gpu-dev-environments" class="md-skip">
           Skip to content
         </a>
       
@@ -238,7 +238,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Debugging
+              GPU Dev Environments
             
           </span>
         </div>
@@ -593,11 +593,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../gpu/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          GPU Dev Environments
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         GPU Dev Environments
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-upgrade-or-downgrade-your-dev-environment" class="md-nav__link">
+    How to upgrade or downgrade your dev environment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu-instance-types" class="md-nav__link">
+    CPU instance types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gpu-instance-types" class="md-nav__link">
+    GPU instance types
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -635,87 +697,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Debugging
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../debugging/" class="md-nav__link">
         Debugging
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reset-brev" class="md-nav__link">
-    Reset Brev
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#500-error-when-running-brev-start" class="md-nav__link">
-    500 error when running brev start
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workspace-version-issue" class="md-nav__link">
-    Workspace version issue
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#global-npm-install-issues" class="md-nav__link">
-    Global npm install issues
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-all-the-startup-logs" class="md-nav__link">
-    See all the startup logs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-brev-without-internet" class="md-nav__link">
-    Run Brev without internet
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -754,43 +740,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#reset-brev" class="md-nav__link">
-    Reset Brev
+  <a href="#getting-started" class="md-nav__link">
+    Getting Started
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#500-error-when-running-brev-start" class="md-nav__link">
-    500 error when running brev start
+  <a href="#how-to-upgrade-or-downgrade-your-dev-environment" class="md-nav__link">
+    How to upgrade or downgrade your dev environment
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#workspace-version-issue" class="md-nav__link">
-    Workspace version issue
+  <a href="#cpu-instance-types" class="md-nav__link">
+    CPU instance types
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#global-npm-install-issues" class="md-nav__link">
-    Global npm install issues
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#see-all-the-startup-logs" class="md-nav__link">
-    See all the startup logs
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-brev-without-internet" class="md-nav__link">
-    Run Brev without internet
+  <a href="#gpu-instance-types" class="md-nav__link">
+    GPU instance types
   </a>
   
 </li>
@@ -809,44 +781,369 @@
                 
 
 
-<h1 id="brev-debugging">Brev Debugging</h1>
-<p>This page has common hurdles or known issues that we're addressing.</p>
-<h2 id="reset-brev">Reset Brev</h2>
-<p>If you're noticing some workspaces to be missing, use the Brev refresh command to try forcing a refresh to the ssh config and ensuring the daemon is started:</p>
-<div class="highlight"><pre><span></span><code>brev refresh
+<h1 id="brev-for-gpu-dev-environments">Brev for GPU Dev Environments! 🤙</h1>
+<p>This page is documentation for Brev GPU dev environments. Brev can help save money on GPUs by:</p>
+<ol>
+<li>
+<p>Automatically shutting down the instance after 3 hours of inactivity. All uncommitted work is saved and can be easily resumed.</p>
+</li>
+<li>
+<p>Enabling your dev environment to change instances. You can start on a very cheap 2x4 and only move to a GPU instance when you need it, and back down to a CPU-only instance using the <code>brev scale</code> command or through the UI.</p>
+</li>
+</ol>
+<h2 id="getting-started">Getting Started</h2>
+<p>To start using Brev GPU dev environments, upgrade your CLI to the latest (or install it)</p>
+<div class="highlight"><pre><span></span><code>brew install brevdev/homebrew-brev/brev
 </code></pre></div>
-<h2 id="500-error-when-running-brev-start">500 error when running <code>brev start</code></h2>
-<p>If you run <code>brev start</code> and see the following 500 error:</p>
-<p><div class="highlight"><pre><span></span><code>➜  ~ brev start https://github.com/brevdev/hello-react
-Name flag omitted, using auto generated name: brevdev/hello-react
-Workspace is starting. This can take up to <span class="m">2</span> minutes the first time.
-
-<span class="o">[</span>error<span class="o">]</span> /home/runner/work/brev-cli/brev-cli/pkg/cmd/start/start.go:260 
-    : https://ade5dtvtaa.execute-api.us-east-1.amazonaws.com/api/organizations/ejmrvoj8m/workspaces?utm_source<span class="o">=</span>cli <span class="m">500</span> Internal Server Error
+<p>To install</p>
+<div class="highlight"><pre><span></span><code>brew upgrade brevdev/homebrew-brev/brev
 </code></pre></div>
-It is likely that you just deleted the workspace and it is still deleting. Please wait 5 seconds and try again.</p>
-<h2 id="workspace-version-issue">Workspace version issue</h2>
-<p>If you've used Brev with older version of the CLI, it's likely that your workspaces need to be upgraded. You might see an error like this:</p>
-<div class="highlight"><pre><span></span><code>workspace of version v1.6.8 is not supported with this cli version<span class="se">\n</span> upgrade your workspace or downgrade your cli<span class="s2">&quot;</span>
+<h2 id="how-to-upgrade-or-downgrade-your-dev-environment">How to upgrade or downgrade your dev environment</h2>
+<p><strong>Using the CLI:</strong></p>
+<p>Run <code>brev scale</code> with the instance you want to scale up or down to. Use the <code>--gpu</code> or <code>--cpu</code> flag accordingly.</p>
+<p>For example, to scale to a g5g.xlarge GPU instance, run:</p>
+<div class="highlight"><pre><span></span><code>brev scale brev-environments-ui --gpu g5g.xlarge
 </code></pre></div>
-<p>There isn't a command to upgrade the workspaces yet, so in the interim, please delete the workspace and create it again.</p>
-<div class="highlight"><pre><span></span><code>brev delete brev-cli
+<p>To scale into a 2x8 CPU instance, run:</p>
+<div class="highlight"><pre><span></span><code>brev scale brev-environments-ui --cpu 2x8
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># if someone else in your org has the workspace</span>
-brev start https://github.com/brevdev/brev-cli 
-</code></pre></div>
-<p>or if someone else in your org has the same workspace, you can <code>brev start</code> by name to create your own workspace. Run <code>brev ls --all</code> to see workspaces already in your org.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># if someone else in your org has the workspace</span>
-brev start brev-cli 
-</code></pre></div>
-<h2 id="global-npm-install-issues">Global npm install issues</h2>
-<p>If you try npm installing something globally, it might not work without sudo.</p>
-<p>Rerun the command with sudo, ex <code>sudo npm install http-server -g</code>. Reach out to support if you're still having issues: https://discord.gg/NVDyv7TUgJ</p>
-<h2 id="see-all-the-startup-logs">See all the startup logs</h2>
-<p>Sometimes weird issues happen when configuring the machine, for example, the project folder is empty because ssh keys weren't configured and the repo couldn't be cloned. </p>
-<p>You can view the full startup logs by running <code>sudo cat /var/log/brev-workspace.log</code> inside your workspace.</p>
-<h2 id="run-brev-without-internet">Run Brev without internet</h2>
-<p>Do you want to run Brev.dev locally without needing internet? We're launching the V2 in late June and would love for you to try it! Hop in the discord and let us know you're waiting for it! https://discord.gg/NVDyv7TUgJ</p>
+<p>See <a href="#CPU-instance-types">below</a> for available instance types</p>
+<p><strong>Using the UI:</strong></p>
+<ol>
+<li>
+<p>From the <a href="https://console.brev.dev">console</a>, click on your dev environment to go to the environment settings page
+   <img alt="Screenshot" src="../media/scale/1_.PNG" /></p>
+</li>
+<li>
+<p>Click on the "Machine Settings" tab to change the instance type
+   <img alt="Screenshot" src="../media/scale/2_.jpg" /></p>
+</li>
+<li>
+<p>Click on GPU or CPU to see the different instance types
+   <img alt="Screenshot" src="../media/scale/3_.jpg" /></p>
+</li>
+<li>
+<p>Once the new instance is selected, click Deploy Changes and hang tight while it updates
+   <img alt="Screenshot" src="../media/scale/4_.jpg" /></p>
+</li>
+</ol>
+<h2 id="cpu-instance-types">CPU instance types</h2>
+<table>
+<thead>
+<tr>
+<th>Instance Name</th>
+<th>CPU</th>
+<th>mem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2x2</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2x4</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2x8</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4x16</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>8x32</td>
+<td>8</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gpu-instance-types">GPU instance types</h2>
+<table>
+<thead>
+<tr>
+<th>Instance Name</th>
+<th>GPU</th>
+<th>vCPU</th>
+<th>mem</th>
+<th>GPUMem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p4d.24xlarge</td>
+<td>8</td>
+<td>96</td>
+<td>1152</td>
+<td>320</td>
+</tr>
+<tr>
+<td>p3.2xlarge</td>
+<td>1</td>
+<td>8</td>
+<td>61</td>
+<td>16</td>
+</tr>
+<tr>
+<td>p3.8xlarge</td>
+<td>4</td>
+<td>32</td>
+<td>244</td>
+<td>64</td>
+</tr>
+<tr>
+<td>p3.16xlarge</td>
+<td>8</td>
+<td>64</td>
+<td>488</td>
+<td>128</td>
+</tr>
+<tr>
+<td>p3dn.24xlarge</td>
+<td>8</td>
+<td>96</td>
+<td>768</td>
+<td>256</td>
+</tr>
+<tr>
+<td>p2.xlarge</td>
+<td>1</td>
+<td>4</td>
+<td>61</td>
+<td>12</td>
+</tr>
+<tr>
+<td>p2.8xlarge</td>
+<td>8</td>
+<td>32</td>
+<td>488</td>
+<td>96</td>
+</tr>
+<tr>
+<td>p2.16xlarge</td>
+<td>16</td>
+<td>64</td>
+<td>732</td>
+<td>192</td>
+</tr>
+<tr>
+<td>g5.xlarge</td>
+<td>1</td>
+<td>4</td>
+<td>16</td>
+<td>24</td>
+</tr>
+<tr>
+<td>g5.2xlarge</td>
+<td>1</td>
+<td>8</td>
+<td>32</td>
+<td>24</td>
+</tr>
+<tr>
+<td>g5.4xlarge</td>
+<td>1</td>
+<td>16</td>
+<td>64</td>
+<td>24</td>
+</tr>
+<tr>
+<td>g5.8xlarge</td>
+<td>1</td>
+<td>32</td>
+<td>128</td>
+<td>24</td>
+</tr>
+<tr>
+<td>g5.16xlarge</td>
+<td>1</td>
+<td>64</td>
+<td>256</td>
+<td>24</td>
+</tr>
+<tr>
+<td>g5.12xlarge</td>
+<td>4</td>
+<td>48</td>
+<td>192</td>
+<td>96</td>
+</tr>
+<tr>
+<td>g5.24xlarge</td>
+<td>4</td>
+<td>96</td>
+<td>384</td>
+<td>96</td>
+</tr>
+<tr>
+<td>g5.48xlarge</td>
+<td>8</td>
+<td>192</td>
+<td>768</td>
+<td>192</td>
+</tr>
+<tr>
+<td>g5g.xlarge</td>
+<td>1</td>
+<td>8</td>
+<td>4</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g5g.2xlarge</td>
+<td>1</td>
+<td>16</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g5g.4xlarge</td>
+<td>1</td>
+<td>32</td>
+<td>16</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g5g.8xlarge</td>
+<td>1</td>
+<td>64</td>
+<td>32</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g5g.16xlarge</td>
+<td>2</td>
+<td>128</td>
+<td>64</td>
+<td>32</td>
+</tr>
+<tr>
+<td>g5g.metal</td>
+<td>2</td>
+<td>128</td>
+<td>64</td>
+<td>32</td>
+</tr>
+<tr>
+<td>g4dn.xlarge</td>
+<td>1</td>
+<td>4</td>
+<td>16</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g4dn.2xlarge</td>
+<td>1</td>
+<td>8</td>
+<td>32</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g4dn.4xlarge</td>
+<td>1</td>
+<td>16</td>
+<td>64</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g4dn.8xlarge</td>
+<td>1</td>
+<td>32</td>
+<td>128</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g4dn.16xlarge</td>
+<td>1</td>
+<td>64</td>
+<td>256</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g4dn.12xlarge</td>
+<td>4</td>
+<td>48</td>
+<td>192</td>
+<td>64</td>
+</tr>
+<tr>
+<td>g4dn.metal</td>
+<td>8</td>
+<td>96</td>
+<td>384</td>
+<td>128</td>
+</tr>
+<tr>
+<td>g4ad.xlarge</td>
+<td>1</td>
+<td>4</td>
+<td>16</td>
+<td>8</td>
+</tr>
+<tr>
+<td>g4ad.2xlarge</td>
+<td>1</td>
+<td>8</td>
+<td>32</td>
+<td>8</td>
+</tr>
+<tr>
+<td>g4ad.4xlarge</td>
+<td>1</td>
+<td>16</td>
+<td>64</td>
+<td>8</td>
+</tr>
+<tr>
+<td>g4ad.8xlarge</td>
+<td>2</td>
+<td>32</td>
+<td>128</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g4ad.16xlarge</td>
+<td>4</td>
+<td>64</td>
+<td>256</td>
+<td>32</td>
+</tr>
+<tr>
+<td>g3s.xlarge</td>
+<td>1</td>
+<td>4</td>
+<td>30.5</td>
+<td>8</td>
+</tr>
+<tr>
+<td>g3.4xlarge</td>
+<td>1</td>
+<td>16</td>
+<td>122</td>
+<td>8</td>
+</tr>
+<tr>
+<td>g3.8xlarge</td>
+<td>2</td>
+<td>32</td>
+<td>244</td>
+<td>16</td>
+</tr>
+<tr>
+<td>g3.16xlarge</td>
+<td>4</td>
+<td>64</td>
+<td>488</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
@@ -864,7 +1161,7 @@ brev start brev-cli
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../brev-cli/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CLI Docs" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -873,11 +1170,26 @@ brev start brev-cli
               <span class="md-footer__direction">
                 Previous
               </span>
-              CLI Docs
+              Home
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../dot-brev-setup-script/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup Scripts (.brev)" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Setup Scripts (.brev)
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
