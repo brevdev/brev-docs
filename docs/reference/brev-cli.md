@@ -1,4 +1,5 @@
 <!--todo split into multiple docs -->
+
 # Brev CLI Reference
 
 The Brev CLI is the preferred interface for Brev, allowing you to use cloud computers with your local development tools. Our goal is to be as invisible as possible.
@@ -7,12 +8,45 @@ Every command has a `--help` flag if you need to see options.
 
 Brev CLI commands are broken up into 4 categories:
 
- - Workspace commands
- - Context commands
- - SSH command
- - Housekeeping commands.
+- Workspace commands
+- Context commands
+- SSH command
+- Housekeeping commands.
 
 ## Workspace Commands
+
+### scale
+
+Scale a dev environment up or down to a different instance
+
+#### Synopsis
+
+```
+    brev scale [ Workspace Name or ID... ] --gpu [GPU Instance]
+
+#	or
+
+	brev scale [ Workspace Name or ID... ] --cpu [CPU Instance]
+```
+
+#### Description
+
+Move your dev environment to a different size machine. All work, settings, etc will be persisted.
+View [available instance types here](/reference/gpu#cpu-instance-types).
+
+#### Examples
+
+##### Scale to a GPU instance
+
+```
+$ brev scale brev-environments-ui --gpu g5g.xlarge
+```
+
+##### Scale to a CPU instance
+
+```
+$ brev scale brev-environments-ui --cpu 2x8
+```
 
 ### delete
 
@@ -53,12 +87,14 @@ Deleting workspace jupyter. This can take a few minutes. Run 'brev ls' to check 
 ### reset
 
 #### Description
- This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually.
+
+This command deletes your machine and gets you a fresh one. Make sure to have a [.brev setup script](/reference/dot-brev-setup-script/) or you'll have to reinstall everythign manually.
 
 **Note: even if not committed, the `.brev/setup.sh` script will persist because everythign in `/home/workspace` will be saved.
 👆 This makes it really easy to change your environment without needing to commit the changes to main.**
 
 #### Example
+
 reset a workspace with the name `payments-frontend`
 
 ```
@@ -67,9 +103,11 @@ Workspace payments-frontend is resetting.
 Note: this can take a few seconds. Run 'brev ls' to check status
 
 ```
+
 ### start
 
 create start and join a workspace
+
 #### Synopsis
 
 ```
@@ -102,8 +140,8 @@ the name `cli` from the git repo `https://github.com/brevdev/brev-cli`.
 $ brev start https://github.com/brevdev/brev-cli -n cli
 ```
 
-
 #### Examples
+
 ##### Create an empty workspace
 
 ```
@@ -157,7 +195,6 @@ connect to the workspace:
 ```
 
 view your workspace with `brev ls`
-
 
 ##### create a workspace, and do not block shell until workspace is created
 
@@ -214,7 +251,6 @@ Connect to the workspace:
 ```
 
 ##### Create a workspace from a git repository
-
 
 ```
 $ brev start https://github.com/brevdev/react-starter-app
@@ -323,7 +359,9 @@ Connect to running workspace:
 	ssh linear-client-yw1a	# ssh <SSH-NAME> -> ssh directly to workspace
 
 ```
+
 join the workspace
+
 ```
 $ brev start linear-client
 ```
@@ -337,18 +375,21 @@ Note: this can take about a minute. Run 'brev ls' to check status
 You can safely ctrl+c to exit
 ```
 
-
 **Note: if you want to make multiple workspaces with the same git repo, use the --name flag with brev start**
 You can have multiple workspaces with the same git repo, however, each workspace must have a unique name.
 
 ### stop
+
 If you don't plan on using your Brev workspace, you can temporarily pause it by running
+
 ```zsh
 brev stop workspace_name
 ```
+
 Everything in `/home/workspace` will be saved when it boots up again.
 
 stop multiple workspaces
+
 ```
 $ brev stop brev-deploy naive-pubsub bar euler54 merge-json
 Workspace brev-deploy is stopping.
@@ -376,10 +417,10 @@ Note: this can take a few seconds. Run 'brev ls' to check status
 port forward allows you to forward a port from a brev workspace to a port on
 your local machine.
 
-
 #### Examples
 
 ##### Forward a port from a workspace to localhost
+
 port forward port 3333 on a workspace with the name `brev-docs` to port 3000 on your localhost
 
 ```zsh
@@ -414,10 +455,13 @@ localhost:3000 -> brev-docs-xp43:3333
 ```
 
 #### See Also
+
 ## Context Commands
+
 Brev commands run within the context of an organization, this way it's really clear if something is running under your personal account or under your organization's. Most commands support an `--active-org` flag for scripting purposes.
 
 ### ls
+
 Print a tabular view of your workspaces or orgs
 
 ```zsh
@@ -432,39 +476,42 @@ brev ls --org org_name
 ```
 
 ### set
+
 Set the organization context for your commands.
+
 ```zsh
 brev set <org name>
 ```
 
-
 ## Housekeeping Commands
 
 ### jetbrains
+
 Jetbrains, unfortunately, doesn't use the standard SSH file, and instead uses a custom XML file. To establish a connection between your local computer and all of the workspaces in your organization, run:
 
 ```zsh
 brev jetbrains
 ```
 
-This command runs a helper proxy for jetbrains products that allows your jetbrains IDEs ssh access. It does *not* update if new workspaces are created or deleted, so please stop the process and re-run it to update it.
+This command runs a helper proxy for jetbrains products that allows your jetbrains IDEs ssh access. It does _not_ update if new workspaces are created or deleted, so please stop the process and re-run it to update it.
 
 Note: this will hold your shell. Keep this process running to keep the connection live. If there's a timeout for whatever reason, please ctrl+c and re-run `brev jetbrains`.
 
 ### login
 
-
 #### Synopsis
+
 ```
 	brev login [--token] [--skip-browser]
 ```
+
 #### Description
 
 This function log's you in to your brev account, and preforms some actions that
 brev needs to function with you user account such as set up config files and
 
-
 <!--todo  explain this a little clearer -->
+
 - creates `~/.brev/` directory if it does not exist
 - if you don't have an account on brev, the browser step will create one for you
 - on first run asks you onboarding questions
@@ -474,20 +521,27 @@ brev needs to function with you user account such as set up config files and
 - runs `brev run-tasks -d` <!-- todo link to doc page >
 
 #### Flags
+
 #### Examples
 
 ```
 $ brev login
 ```
+
 #### See Also
+
 <!-- todo link to logout page -->
+
 ### logout
+
 Remove your keys and logout
+
 ```zsh
 brev logout
 ```
 
 ### profile
+
 If you have personal settings, such as aliases or shortcuts in your `~/.zshrc` or `~/.bash_profile`, you can sync them with Brev.dev to make sure every workspace you create has them.
 
 Create a git repo with setup script at `~.brev/setup.sh` or fork our example [here](https://github.com/brevdev/user-dotbrev). Once your setup is copied over, add it to your profile with
@@ -497,15 +551,19 @@ brev profile --set-personal-config _git_repo_url_
 ```
 
 ### refresh
+
 As a troubleshooting measure, you can force the cache to refresh if you suspect they're stale.
+
 ```zsh
 brev refresh
 ```
 
 ### secret
+
 Use the encrypted secrets manager to load secret files and environment variables into your workspace, or set them for the entire org.
 
 Run the command in interactive mode by ommitting the flags
+
 ```zsh
 brev secret
 ```
@@ -513,23 +571,29 @@ brev secret
 A secret file or environment variable needs a name and a value, the scope to be set (org or private), a type (variable or file). If the secret is a file, you'll also need to supply the path
 
 Ex: personal environment variable
+
 ```zsh
   brev secret --name SERVER_URL --value https://brev.sh --type variable --scope personal
 ```
 
 Ex: personal AWS credentials file
+
 ```zsh
   brev secret --name AWS_KEY --value ... --type file --file-path --scope personal
 ```
 
 ### ssh-key
+
 Get your ssh keys to add to your git provider.
+
 ```zsh
 brev ssh-key
 ```
+
 Quick links to add it to [Github](https://github.com/settings/keys) or [Gitlab](https://gitlab.com/-/profile/keys)
 
 ### run-tasks
+
 #### Synopsis
 
 ```
@@ -569,5 +633,6 @@ $ brev run-tasks
 ```
 
 #### See Also
+
 - [Configuring SSH Proxy Daemon at Boot](https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/)
--TODO brev configure docs
+  -TODO brev configure docs
