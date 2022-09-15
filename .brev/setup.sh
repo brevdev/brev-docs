@@ -10,13 +10,13 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 rm get-pip.py
 
-export PATH=/home/brev/.local/bin:$PATH 
+export PATH=$HOME/.local/bin:$PATH 
 # below 4 lines are to get above line behavior
 
 echo "" >> ~/.zshrc
-echo "export PATH=/home/brev/.local/bin:$PATH" >> ~/.zshrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.zshrc
 echo "" >> ~/.bashrc
-echo "export PATH=/home/brev/.local/bin:$PATH" >> ~/.bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
 source ~/.zshrc
 source ~/.bashrc
 
