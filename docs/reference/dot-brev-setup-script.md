@@ -3,12 +3,12 @@
 Creating a .brev setup script for each Brev project will standardize dependencies, packages and tools across all developers contributing to the same project (ex. Node v14, Yarn v1.22).
  **Brev will create a /.brev/setup.sh script in your workspace. Commit this to your repo to have it executed for every new Brev machine**
 
-The setup scripts run from your project directory, so `/home/brev/<YOUR_PROJECT_FOLDER_NAME>`
+The setup scripts run from your project directory, so `/home/ubuntu/<YOUR_PROJECT_FOLDER_NAME>`
 
 ## .brev/setup.sh
 This is the main configuration file that runs on your Brev machine, right after your project is cloned.
 
-The working directory when the file is running is `/home/brev/<PROJECT_FOLDER_NAME>`.
+The working directory when the file is running is `/home/ubuntu/<PROJECT_FOLDER_NAME>`.
 
 Careful not to place user settings in here (like VSCode extensions or settings) unless you want to impose them for every contributor in the project. Sometimes this is desireable, for example, to standardize linting practices across the team. Personal settings should go in your personal .brev, see more here: [/howto/copy-personal-settings](/howto/copy-personal-settings).
 

@@ -1,10 +1,9 @@
 # How To
-## Automatically set up Brev machines with .brev setup script.
-Specify software and dependencies that are required for your project. Creating a .brev setup script for each Brev project will standardize dependencies, packages and tools across all developers contributing to the same project (ex. Node v14, Yarn v1.22)
+## Automatically set up Brev dev environments with a bash script.
+Specify software and dependencies that are required for your project. Creating a bash script for each Brev project will standardize dependencies, packages and tools across all developers contributing to the same project (ex. Node v14, Yarn v1.22). We used Bash because we don't want to impose our preference on how you set up your dev environment. For example, if you use Docker, you can run Docker compose in your bash script.
 
 
-
-Below are common installations for your convenience. Add them to your root project directory at `/.brev/setup.sh`
+Below are common installations for your convenience. Add them to your root project directory at `/.brev/setup.sh` or create a separate repo for setup scripts
 
 ### Install Yarn
 ```zsh
@@ -28,8 +27,8 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 ##### Homebrew #####
 (echo ""; echo "##### Homebrew #####"; echo "";)
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash -
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.bash_profile
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/brev/.zshrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.bash_profile
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
@@ -71,9 +70,9 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 rm get-pip.py
 echo "" >> ~/.zshrc
-echo "export PATH=/home/brev/.local/bin:$PATH" >> ~/.zshrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.zshrc
 echo "" >> ~/.bashrc
-echo "export PATH=/home/brev/.local/bin:$PATH" >> ~/.bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
 source ~/.zshrc
 source ~/.bashrc
 source $HOME/.poetry/env

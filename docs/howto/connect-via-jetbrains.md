@@ -1,4 +1,4 @@
-# Connect to a Brev workspace using JetBrains
+# Connect to a Brev dev environment using JetBrains
 
 Make sure you have the [Brev CLI installed](/)
 
@@ -18,7 +18,7 @@ We guide you through this process the first time you download the CLI, but a lin
 3. Your Brev machines should already be listed for you! Select the correct machine and click "Check Connection and Continue". If you do not see your brev machine, [skip to the end](#do-it-manually) of this to manually add ssh connection details 👇
 ![Screenshot](media/jetbrains2.png)
 
-4. Select the IDE you'd like to use. Enter the project directory. This will always be `/home/brev/workspace/<GIT_REPO_OR_PROJECT_NAME>`. If you don't know the GIT_REPO_OR_PROJECT_NAME, simply click on the folder icon to find the correct folder. Click Download and Start IDE! That's it!
+4. Select the IDE you'd like to use. Enter the project directory. This will always be `/home/ubuntu/<GIT_REPO_OR_PROJECT_NAME>`. If you don't know the GIT_REPO_OR_PROJECT_NAME, simply click on the folder icon to find the correct folder. Click Download and Start IDE! That's it!
 ![Screenshot](media/jetbrains3.png)
 
 ---

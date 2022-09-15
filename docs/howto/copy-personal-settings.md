@@ -1,8 +1,8 @@
 # How To
 ## Copy Personal Settings
-You probably have specific settings you wanna bring to every workspace, but only on your workspaces.
+You probably have specific settings you wanna bring to every dev environment, but only on your dev environments.
 
-Brev.dev supports each developer having their own setup script. The repo has a `.brev/setup.sh` file that gets run on every single workspace, but Brev.dev also runs each developer's personal `.brev/setup.sh` if it exists.
+Brev supports each developer having their own setup script or dotfiles repo. The repo has a bash script that gets run on every single dev environment, but Brev will also run your personal bash script on your environments if it exists.
 
 
 ## Create a Personal Settings Repo
@@ -11,7 +11,7 @@ From [the console](https://console.brev.dev){:target="_blank"}, go to your profi
 ![Screenshot](media/personal-settings-2.png)
 <!-- ![Screenshot](media/personal-settings.png) -->
 
-You'll see a section called **Personal Settings**. This has a git repo that Brev.dev clones into every workspace and runs the `.brev/setup.sh` it contains.
+You'll see a section called **Personal Settings**. This has a git repo that Brev clones into every dev environment and runs the bash script it contains. By default, it'll be `.brev/setup.sh` but you can set a different path.
 
 To setup your personal settings:
 
@@ -21,9 +21,9 @@ To setup your personal settings:
 
 You're done!
 
-Now every workspace will clone this repo and run your personal settings.
+Now every dev environment will clone this repo and run your personal settings.
 
 
 ## Make it yours!
 
-Clone your forked repo-- or from any workspace, cd into `/workspace/user-dotbrev`. Commit and push any changes and your next Brev.dev workspace will automatically clone the latest.
+Clone your forked repo-- or from any dev environment, cd into `~/user-dotbrev`. Commit and push any changes and your next Brev environment will automatically clone the latest.

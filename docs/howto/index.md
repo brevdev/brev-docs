@@ -1,7 +1,7 @@
 # How To
 
 ### [Copy Personal Settings](copy-personal-settings.md)
-Copy personal settings into every Brev.dev workspace
+Copy personal settings into every Brev.dev dev environment
 
 ### [Common .Brev Installations](automatically-set-up.md)
 Cheatsheet for common installations for your .brev setup script
@@ -21,10 +21,10 @@ You can reset your Brev machine and get a newly configured one to troubleshoot.
 ### [Invite Users](invite-users.md)
 You can invite users to your org from the CLI or console
 
-<!-- ### [Share Your Workspace](share-your-workspace.md)
+<!-- ### [Share Your dev environment](share-your-dev environment.md)
 Get a link to clone your dev environment in someone else's Brev.dev account -->
 
-### Connect to a workspace
+### Connect to a dev environment
 
 * with [emacs](connect-via-emacs.md)
 

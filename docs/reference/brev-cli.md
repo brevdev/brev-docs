@@ -592,7 +592,7 @@ brev ssh-key
 
 Quick links to add it to [Github](https://github.com/settings/keys) or [Gitlab](https://gitlab.com/-/profile/keys)
 
-### run-tasks
+<!-- ### run-tasks
 
 #### Synopsis
 
@@ -602,7 +602,7 @@ Quick links to add it to [Github](https://github.com/settings/keys) or [Gitlab](
 
 #### Description
 
-In order for brev to connect to workspaces, there needs to be background daemons
+[DEPRECATED]. In order for brev to connect to workspaces, there needs to be background daemons
 running to manage some things on your local machines environment. Currently, the
 one that is being launched by run-tasks is an ssh config file configuration
 daemon that periodically udpates a ssh config file with connection information
@@ -635,4 +635,4 @@ $ brev run-tasks
 #### See Also
 
 - [Configuring SSH Proxy Daemon at Boot](https://docs.brev.dev/howto/configure-ssh-proxy-daemon-at-boot/)
-  -TODO brev configure docs
+  -TODO brev configure docs -->

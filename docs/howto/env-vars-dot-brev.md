@@ -14,7 +14,7 @@ rm get-pip.py
 
 You'll need to instead put this new path in your zshrc and bashrc and source both files.
 ```zsh
-printf "\n%s\n" "export PATH=/home/brev/.local/bin:$PATH" | tee -a ~/.bashrc | tee -a ~/.zshrc
+printf "\n%s\n" "export PATH=$HOME/.local/bin:$PATH" | tee -a ~/.bashrc | tee -a ~/.zshrc
 
 # Instead of exporting the variable:
 # export PATH=/home/brev/.local/bin:$PATH 
@@ -30,9 +30,9 @@ python3 get-pip.py
 rm get-pip.py
 
 echo "" >> ~/.zshrc
-echo "export PATH=/home/brev/.local/bin:$PATH" >> ~/.zshrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.zshrc
 echo "" >> ~/.bashrc
-echo "export PATH=/home/brev/.local/bin:$PATH" >> ~/.bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
 source ~/.zshrc
 source ~/.bashrc
 ```

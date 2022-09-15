@@ -1,6 +1,6 @@
 # Create a Brev Organization
 
-You can create a Brev organization in the [Brev dashboard](https://console.brev.dev){:target="_blank"}.
+You can create a Brev organization in the [Brev console](https://console.brev.dev){:target="_blank"}.
 
 From the Organization dropdown at the top, click `Create New Organization`.
 
